@@ -1,0 +1,31 @@
+package com.pcs.model;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+
+public class AndroidVersions implements Parcelable{
+	private String firstversion;
+	private String secondversion;
+	private String thirdversion;
+	private String fourthversion;
+	private String fifthversion;
+	private String sixthversion;
+	private String seventhversion;
+	private String eigthversion;
+	private String ninthversion;
+	private String tenthversion;
+	private String eleventhversion;
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

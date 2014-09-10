@@ -1,0 +1,6 @@
+<resources>
+
+    <string name="app_name">ParcelableDataActivity</string>
+    <string name="heading">Parcelable Data Activity</string>
+
+</resources>

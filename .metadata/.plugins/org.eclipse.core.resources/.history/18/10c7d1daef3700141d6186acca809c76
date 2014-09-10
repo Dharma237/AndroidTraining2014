@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">ParcelableDataActivity</string>
+    <string name="heading">Parcelable Data Activity</string>
+    <string name="button">Click to see Android Versions</string>
+    <string name="first">Click to see Android Versions</string>
+    <string name="second">Click to see Android Versions</string>
+    <string name="third">Cupcake (1.5)</string>
+    <string name="fourth">Click to see Android Versions</string>
+    <string name="fifth">Click to see Android Versions</string>
+    <string name="sixth">Click to see Android Versions</string>
+    <string name="seventh">Click to see Android Versions</string>
+
+</resources>

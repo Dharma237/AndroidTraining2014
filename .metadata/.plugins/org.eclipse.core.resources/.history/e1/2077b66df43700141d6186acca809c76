@@ -1,0 +1,8 @@
+package com.pcs.model;
+
+import android.os.Parcelable;
+
+
+public class AndroidVersions implements Parcelable{
+
+}

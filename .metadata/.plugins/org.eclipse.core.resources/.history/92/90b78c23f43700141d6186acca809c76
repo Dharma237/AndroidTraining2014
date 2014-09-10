@@ -1,0 +1,44 @@
+package com.pcs.parcelabledataactivity;
+
+import com.pcs.constants.Constants;
+import com.pcs.model.AndroidVersions;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class ParcelableDataActivity extends Activity{
+	private Button AndroidBtn;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+				super.onCreate(savedInstanceState);
+				setContentView(R.layout.parcelable);
+				AndroidBtn = (Button)findViewById(R.id.btn);
+				AndroidBtn.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Intent intent = new Intent(ParcelableDataActivity.this,RecieverDataActivity.class);
+						AndroidVersions android_versions = new AndroidVersions();
+						android_versions.setfirstversion(getResources().getString(R.string.first));
+						android_versions.setsecondversion(getResources().getString(R.string.second));
+						android_versions.setthirdversion(getResources().getString(R.string.third));
+						android_versions.setfourthversion(getResources().getString(R.string.fourth));
+						android_versions.setfifthversion(getResources().getString(R.string.fifth));
+						android_versions.setsixthversion(getResources().getString(R.string.sixth));
+						android_versions.setseventhversion(getResources().getString(R.string.seventh));
+						android_versions.seteigthversion(getResources().getString(R.string.eigth));
+						android_versions.setninthversion(getResources().getString(R.string.ninth));
+						android_versions.settenthversion(getResources().getString(R.string.tenth));
+						android_versions.setleventhversion(getResources().getString(R.string.eleventh));
+						intent.putExtra(Constants.IntentExtras.ANDROID, android_versions);
+						startActivity(intent);
+					}
+				});
+				
+	}
+
+}
