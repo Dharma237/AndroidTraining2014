@@ -1,9 +1,0 @@
-package com.pcs.model;
-
-import android.os.Parcelable;
-
-import com.pcs.parcelabledataactivity.ParcelableDataActivity;
-
-public class AndroidVersions implements Parcelable{
-
-}

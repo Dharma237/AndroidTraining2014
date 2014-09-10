@@ -1,7 +1,0 @@
-<resources>
-
-    <string name="app_name">ParcelableDataActivity</string>
-    <string name="heading">Parcelable Data Activity</string>
-    <string name="button">Click to see Android Versions</string>
-
-</resources>
