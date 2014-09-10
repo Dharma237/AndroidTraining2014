@@ -16,7 +16,6 @@ public final class R {
         public static final int dial=0x7f020002;
         public static final int ic_launcher=0x7f020003;
         public static final int music=0x7f020004;
-        public static final int windows=0x7f020005;
     }
     public static final class id {
         public static final int browse_btn=0x7f060002;
@@ -29,6 +28,10 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040000;
+        public static final int browse=0x7f040003;
+        public static final int call=0x7f040002;
+        public static final int contact=0x7f040004;
+        public static final int music=0x7f040005;
         public static final int txt=0x7f040001;
     }
     public static final class style {
@@ -41,11 +44,6 @@ public final class R {
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
 
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and

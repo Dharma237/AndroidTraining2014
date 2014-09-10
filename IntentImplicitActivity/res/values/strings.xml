@@ -2,5 +2,9 @@
 
     <string name="app_name">IntentImplicitActivity</string>
     <string name="txt">Click on Required Icon</string>
+    <string name="call">You are not allowed to Call</string>
+    <string name="browse">No Browser in ur Android Mobile</string>
+    <string name="contact">No contacts in Contact List</string>
+    <string name="music">No Music Player</string>
 
 </resources>
