@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#996600"
+        android:textColor="#FFFFFF"
+        android:text="@string/txt"
+        android:layout_marginTop="10dp"
+        />
+  <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:layout_marginTop="10dp">
+    
+<Button android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/dial_btn"
+    android:background="@drawable/dial"/>
+<Button android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/music_btn"
+    android:background="@drawable/music"/>
+</LinearLayout>
+ <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+<Button android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/browse_btn"
+    android:background="@drawable/chrome"/>
+<Button android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/contact_btn"
+    android:background="@drawable/contact"/>
+</LinearLayout>
+</LinearLayout>
