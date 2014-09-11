@@ -1,5 +1,10 @@
 <resources>
 
     <string name="app_name">ImplicitButtonActivity</string>
+    <string name="image">Image View</string>
+    <string name="text">Text View</string>
+    <string name="music">Music View</string>
+    <string name="browse">Browse View</string>
+    <string name="video">Video View</string>
 
 </resources>

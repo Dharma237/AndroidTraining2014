@@ -9,7 +9,7 @@ public class ImplicitButtonActivity extends Activity{
 	private Button textBtn;
 	private Button browseBtn;
 	private Button musicBtn;
-	private Button contactBtn;
+	private Button videoBtn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

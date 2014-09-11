@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">ImplicitButtonActivity</string>
+    <string name="image">ImplicitButtonActivity</string>
+    <string name="text">ImplicitButtonActivity</string>
+    <string name="music">ImplicitButtonActivity</string>
+    <string name="browse">ImplicitButtonActivity</string>
+    <string name="video">ImplicitButtonActivity</string>
+
+</resources>
