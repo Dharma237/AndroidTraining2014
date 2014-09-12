@@ -1,8 +1,0 @@
-package com.pcs.implicitbuttonactivity;
-
-import android.app.Activity;
-
-public class ImplicitButtonActivity extends Activity{
-	
-
-}

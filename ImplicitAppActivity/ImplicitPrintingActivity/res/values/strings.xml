@@ -1,5 +1,8 @@
 <resources>
 
     <string name="app_name">ImplicitPrintingActivity</string>
+     <string name="imageview">Indian Flag</string>
+     <string name="message">Hi Android Trainees</string>
+     <string name="dharma">Dharma</string>
 
 </resources>

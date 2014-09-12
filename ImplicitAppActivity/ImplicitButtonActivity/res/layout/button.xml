@@ -22,11 +22,6 @@
 <Button 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/music_btn"
-    android:text="@string/music"/>
-<Button 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:id="@+id/video_btn"
     android:text="@string/video"/>
 </LinearLayout>
