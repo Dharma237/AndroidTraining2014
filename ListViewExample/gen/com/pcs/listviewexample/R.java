@@ -17,8 +17,14 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
+        public static final int add=0x7f060005;
+        public static final int address_edt=0x7f06000a;
+        public static final int done=0x7f06000b;
         public static final int image_display=0x7f060000;
-        public static final int listview=0x7f060005;
+        public static final int list_view=0x7f060006;
+        public static final int mail_edt=0x7f060008;
+        public static final int name_edt=0x7f060007;
+        public static final int phone_edt=0x7f060009;
         public static final int user_address=0x7f060004;
         public static final int user_email=0x7f060002;
         public static final int user_name=0x7f060001;
@@ -26,11 +32,18 @@ public final class R {
     }
     public static final class layout {
         public static final int display=0x7f030000;
-        public static final int listview=0x7f030001;
+        public static final int list=0x7f030001;
+        public static final int list_view=0x7f030002;
     }
     public static final class string {
+        public static final int address=0x7f040007;
         public static final int app_name=0x7f040000;
+        public static final int done=0x7f040003;
         public static final int image=0x7f040001;
+        public static final int mail=0x7f040005;
+        public static final int name=0x7f040004;
+        public static final int news=0x7f040002;
+        public static final int phone=0x7f040006;
     }
     public static final class style {
         /** 

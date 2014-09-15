@@ -65,7 +65,8 @@ public class CustomAdapter extends BaseAdapter{
 				holder.image.setBackgroundResource(R.drawable.harish);
 			else if(position==2)
 				holder.image.setBackgroundResource(R.drawable.anitha);
-			
+			else
+				holder.image.setBackgroundResource(R.drawable.ic_launcher);
 		holder.nameTxt.setText(userdetails.getUserName());
 		holder.emailTxt.setText(userdetails.getEmail());
 		holder.phoneTxt.setText(userdetails.getPhoneNumber());
