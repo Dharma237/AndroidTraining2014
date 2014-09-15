@@ -1,21 +1,17 @@
 package com.pcs.listviewactivity;
 import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ListView;
+
 import com.pcs.customadapterlist.CustomAdapter;
 import com.pcs.listuser.User;
 import com.pcs.listviewexample.R;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListView;
-import android.widget.Toast;
-
 public class ListViewActivity extends Activity{
 	private ListView listview;
-	private User user;
+	private ArrayList<User> userslist;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,9 +20,9 @@ public class ListViewActivity extends Activity{
 		ArrayList<User> userslist = new ArrayList<User>();
 		User user = new User();
 		user.setUserName("Dharma");
-		user.setPhoneNumber("9985458500");
 		user.setEmail("dharmasai.seerapu@gmail.com");
-		user.setAddress("eCentric Solutions");
+		user.setAddress("eCentric");
+		user.setPhoneNumber("9985458500");
 		userslist.add(user);
 		user = new User();
 		user.setUserName("Harish");

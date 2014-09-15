@@ -1,10 +1,22 @@
 package com.pcs.listuser;
 
+import android.media.Image;
+
 public class User {
 	private String email;
 	private String phoneNumber;
 	private String userName;
 	private String address;
+	private Image image;
+
+
+
+	public Image getImage() {
+		return image;
+	}
+	public void setImage(Image image) {
+		this.image = image;
+	}
 	public String getEmail() {
 		return email;
 	}
