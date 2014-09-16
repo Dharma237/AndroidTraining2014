@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/add"
         android:text="@string/news"
-         android:background="#631963"
+         android:background="#009933"
         android:textSize="15sp"
         android:padding="10dp"
         android:layout_gravity="center"

@@ -59,18 +59,12 @@ public class CustomAdapter extends BaseAdapter{
 		else {
 			holder = (ViewHolder)convertView.getTag();
 		}
-			if(position==0)
-				holder.image.setBackgroundResource(R.drawable.dharma);
-			else if(position==1)
-				holder.image.setBackgroundResource(R.drawable.harish);
-			else if(position==2)
-				holder.image.setBackgroundResource(R.drawable.anitha);
-			else
-				holder.image.setBackgroundResource(R.drawable.ic_launcher);
-		holder.nameTxt.setText("Name:-"+userdetails.getUserName());
-		holder.emailTxt.setText("eMail-"+userdetails.getEmail());
-		holder.phoneTxt.setText("Phone No:-"+userdetails.getPhoneNumber());
-		holder.addressTxt.setText("Address:-"+userdetails.getAddress());
+			
+		holder.image.setBackgroundResource(R.drawable.user);
+		holder.nameTxt.setText(userdetails.getUserName());
+		holder.emailTxt.setText(userdetails.getEmail());
+		holder.phoneTxt.setText(userdetails.getPhoneNumber());
+		holder.addressTxt.setText(userdetails.getAddress());
 		holder.nameTxt.setTextSize(15);
 		convertView.setPadding(5, 10, 5, 10);
 		return convertView;
@@ -81,6 +75,45 @@ public class CustomAdapter extends BaseAdapter{
 		public TextView phoneTxt;
 		public TextView addressTxt;
 		public ImageView image;
+	}
+	/**
+	 * userslist should not be null if so, throws IllegalArgument Exception
+	 * takes argument as userslist
+	 * @param userslist
+	 * @throws IllegalArgumentException
+	 */
+	public void addUsers (ArrayList<User> userslist) throws IllegalArgumentException
+	{
+		if(users!=null)
+		{
+			userslist = new ArrayList<User>();
+		}
+		if(userslist!=null )
+		{
+			for (User user : userslist) {
+				users.add(user);
+				
+			}
+			notifyDataSetChanged();
+		}
+		else 
+			throw new IllegalArgumentException("UsersList should not be null");
+	}
+	/**
+	 * takes user object as a argument
+	 * if user is null then throws IllegalArgumentException
+	 * @param user
+	 * @throws IllegalArgumentException
+	 */
+	public void addUser(User user) throws IllegalArgumentException
+	{
+		if(users!=null)
+		{
+			users.add(user);
+			notifyDataSetChanged();
+		}
+		else
+			throw new IllegalArgumentException("User Object should not be null");
 	}
 }
 

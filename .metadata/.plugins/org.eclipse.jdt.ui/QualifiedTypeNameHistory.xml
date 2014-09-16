@@ -39,10 +39,11 @@
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="com.pcs.listuser.User"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.pcs.constants.Constants"/>
 <fullyQualifiedTypeName name="com.pcs.constants.Constants.IntentExtras"/>
 <fullyQualifiedTypeName name="android.widget.ListView"/>
-<fullyQualifiedTypeName name="com.pcs.customadapterlist.CustomAdapter"/>
 <fullyQualifiedTypeName name="com.pcs.listviewactivity.ListViewActivity"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="com.pcs.customadapterlist.CustomAdapter"/>
 </qualifiedTypeNameHistroy>

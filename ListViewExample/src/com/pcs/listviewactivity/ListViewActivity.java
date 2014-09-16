@@ -20,6 +20,7 @@ public class ListViewActivity extends Activity{
 	private ArrayList<User> users;
 	private User user;
 	private Button addBtn;
+	private CustomAdapter adapter;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class ListViewActivity extends Activity{
 		addBtn = (Button)findViewById(R.id.add);
 		users = new ArrayList<User>();
 		user = new User();
+		adapter = new CustomAdapter(ListViewActivity.this, users);
 		addBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -54,7 +56,6 @@ public class ListViewActivity extends Activity{
 			user.setPhoneNumber(phone);
 			user.setAddress(address);
 			users.add(user);
-			CustomAdapter adapter = new CustomAdapter(ListViewActivity.this, users);
 			ls.setAdapter(adapter);
 		}
 	}
