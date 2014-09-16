@@ -38,6 +38,8 @@ public final class R {
     public static final class string {
         public static final int address=0x7f040007;
         public static final int app_name=0x7f040000;
+        public static final int contacts=0x7f040009;
+        public static final int details=0x7f040008;
         public static final int done=0x7f040003;
         public static final int image=0x7f040001;
         public static final int mail=0x7f040005;

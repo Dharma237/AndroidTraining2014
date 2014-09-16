@@ -67,11 +67,12 @@ public class CustomAdapter extends BaseAdapter{
 				holder.image.setBackgroundResource(R.drawable.anitha);
 			else
 				holder.image.setBackgroundResource(R.drawable.ic_launcher);
-		holder.nameTxt.setText(userdetails.getUserName());
-		holder.emailTxt.setText(userdetails.getEmail());
-		holder.phoneTxt.setText(userdetails.getPhoneNumber());
-		holder.addressTxt.setText(userdetails.getAddress());
+		holder.nameTxt.setText("Name:-"+userdetails.getUserName());
+		holder.emailTxt.setText("eMail-"+userdetails.getEmail());
+		holder.phoneTxt.setText("Phone No:-"+userdetails.getPhoneNumber());
+		holder.addressTxt.setText("Address:-"+userdetails.getAddress());
 		holder.nameTxt.setTextSize(15);
+		convertView.setPadding(5, 10, 5, 10);
 		return convertView;
 	}
 	public class ViewHolder{

@@ -2,11 +2,13 @@
 
     <string name="app_name">ListViewExample</string>
     <string name="image">New Image</string>
-    <string name ="news">Add New Member</string>
+    <string name ="news">Add New Member  --></string>
     <string name = "done">Done</string>
     <string name = "name">Enter UserName</string>
     <string name = "mail">Enter email Address</string>
     <string name = "phone">Enter Phone Number</string>
     <string name = "address">Enter Address</string>
+    <string name="details">Provide Contact Information</string>
+    <string name="contacts">Overall Contacts</string>
 
 </resources>
