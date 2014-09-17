@@ -7,6 +7,8 @@
     <string name="cancel_btn">Cancel</string>
     <string name="enter_btn">Enter</string>
     <string name="none">Cancel Button Pressed</string>
+    <string name="hint_name">Enter Your Name</string>
+    <string name="hint_mail">Enter eMail ID</string>
 
 
 </resources>
