@@ -22,6 +22,7 @@ import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -133,6 +134,36 @@ public class DialogProgressActivity extends Activity{
 
 			        }
 			    });
+				ProgressBar progress = new ProgressBar(DialogProgressActivity.this);
+				progress.setVisibility(View.GONE);
+				progress.setMax(100);
+					String name = nameEdt.getText().toString();
+					if(name!=null)
+					{
+						progress.setProgress(20);
+					}
+					String mail = mailEdt.getText().toString();
+					if(mail!=null)
+					{
+						progress.setProgress(40);
+					}
+					String phone = phoneEdt.getText().toString();
+					if(phone!=null)
+					{
+						progress.setProgress(40);
+					}
+					String date = timeEdt.getText().toString();
+					if(date!=null)
+					{
+						progress.setProgress(40);
+					}
+					String time = dateEdt.getText().toString();
+					if(time!=null)
+					{
+						progress.setProgress(40);
+					}
+					
+					
 				/**
 				 * Entered Details are stored in listView when user clicks on enterBtn
 				 */
@@ -172,6 +203,10 @@ public class DialogProgressActivity extends Activity{
 			}
 
 		});
+		
+		
+		
+		
 		/***
 		 * List View contains name,email and phone Number of user
 		 * Dialog will appear with 3 Buttons Phone,Message,Cancel when user clicks on ListView
