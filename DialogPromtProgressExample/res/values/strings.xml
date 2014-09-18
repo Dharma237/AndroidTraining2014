@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">DialogProgessExample</string>
-    <string name="details_txt">Dialog Example</string>
+    <string name="details_txt">Dialog Progess Example</string>
     <string name="click_btn">Enter Details in Dialog Box</string>
     <string name="title_txt">Enter User Credentials</string>
     <string name="cancel_btn">Cancel</string>
