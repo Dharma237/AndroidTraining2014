@@ -9,6 +9,12 @@
     <string name="none">Cancel Button Pressed</string>
     <string name="hint_name">Enter Your Name</string>
     <string name="hint_mail">Enter eMail ID</string>
+    <string name="hint_phone">Enter Phone Number</string>
+    <string name="phone_person">PhoneNumber</string>
+    <string name="name_person">Name</string>
+    <string name="phone_cancel">Exit</string>
+    <string name="message">Hi,Android Developers...</string>
+    <string name="no_message">No Message Option in your Emulator</string>
 
 
 </resources>
