@@ -52,7 +52,10 @@ public class DialogClassActivity extends Activity{
 		users = new ArrayList<User>();
 		user = new User();
 
-
+		/***
+		 * Dialog will appear when user clicks on clickBtn
+		 * Dialog Contains 2 EditTexts and 2 Buttons(enterBtn,cancelBtn)
+		 */
 
 		clickBtn.setOnClickListener(new OnClickListener() {
 
@@ -77,6 +80,9 @@ public class DialogClassActivity extends Activity{
 				cancelBtn = (Button)dialogView.findViewById(R.id.cancel_btn);
 
 				builder.setView(dialogView);
+				/**
+				 * Entered Details are stored in listView when user clicks on enterBtn
+				 */
 				enterBtn.setOnClickListener(new OnClickListener() {
 
 					@Override
@@ -92,6 +98,9 @@ public class DialogClassActivity extends Activity{
 
 					}
 				});
+				/**
+				 * Re-directed to Home Page when User clicks on CanceBtn
+				 */
 				cancelBtn.setOnClickListener(new OnClickListener() {
 
 					@Override
@@ -107,6 +116,11 @@ public class DialogClassActivity extends Activity{
 			}
 
 		});
+		/***
+		 * List View contains name,email and phone Number of user
+		 * Dialog will appear with 3 Buttons Phone,Message,Cancel when user clicks on ListView
+		 */
+		
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -125,6 +139,10 @@ public class DialogClassActivity extends Activity{
 				builder.setView(dialogphoneView);
 				nameListItemTxt.setText(getResources().getString(R.string.name_person)+":\t"+nameEdt.getText().toString());
 				phoneListItemTxt.setText(getResources().getString(R.string.phone_person)+":\t"+phoneEdt.getText().toString());
+				
+				/**
+				 * User can call to the entered number
+				 */
 				phoneItemBtn.setOnClickListener(new OnClickListener() {
 
 					@Override
@@ -136,7 +154,10 @@ public class DialogClassActivity extends Activity{
 						alertDialog.dismiss();
 					}
 				});
-				
+				/***
+				 * Message will sent to the entered number if message option is avilable in Emulator
+				 * Otherwise it will alert Toast Message
+				 */
 				messageItemBtn.setOnClickListener(new OnClickListener() {
 					String message= getResources().getString(R.string.message);
 					String phoneNumber = phoneEdt.getText().toString();
@@ -149,6 +170,9 @@ public class DialogClassActivity extends Activity{
 					}
 				});
 				
+				/**
+				 * User endUp with ListView
+				 */
 				cancelItemBtn.setOnClickListener(new OnClickListener() {
 
 					@Override
@@ -162,6 +186,12 @@ public class DialogClassActivity extends Activity{
 			}
 		});
 		}
+	/***
+	 * phoneNumber should not be null
+	 * message can be null but better to send text
+	 * @param phoneNumber
+	 * @param message
+	 */
 		 private void sendSMS(String phoneNumber, String message)
 		   {
 		       SmsManager sms = SmsManager.getDefault();
