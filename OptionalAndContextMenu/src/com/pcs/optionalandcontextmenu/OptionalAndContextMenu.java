@@ -31,6 +31,7 @@ public class OptionalAndContextMenu extends Activity{
 		registerForContextMenu(fourthSong);
 		
 	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -46,6 +47,9 @@ public class OptionalAndContextMenu extends Activity{
 		MenuInflater inflaterContextMenu = getMenuInflater();
 		inflaterContextMenu.inflate(R.menu.contextmenu, menu);
 	}
+	/**
+	 * Handles every Item in the ContextMenu
+	 */
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -86,6 +90,9 @@ public class OptionalAndContextMenu extends Activity{
 		
 		return super.onContextItemSelected(item);
 	}
+	/**
+	 * Handles EveryItem in the OptionsMenu
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
