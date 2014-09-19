@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    
-
+<item 
+    android:id="@+id/option_allTracks"
+    android:title="@string/option_allTracks"
+    android:icon="@drawable/playlist"
+    />
+<item 
+    android:id="@+id/option_albums"
+    android:title="@string/option_albums"
+    android:icon="@drawable/albums"
+    />
+<item 
+    android:id="@+id/option_artists"
+    android:title="@string/option_artists"
+    android:icon="@drawable/artist"
+    />
+<item 
+    android:id="@+id/option_years"
+    android:title="@string/option_years"
+    android:icon="@drawable/years"
+    />
+<item 
+    android:id="@+id/option_genres"
+    android:title="@string/option_genres"
+    android:icon="@drawable/genres"
+    />
 </menu>

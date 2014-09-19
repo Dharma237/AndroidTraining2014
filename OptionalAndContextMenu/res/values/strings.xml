@@ -1,5 +1,41 @@
 <resources>
 
-    <string name="app_name">OptionalAndContextMenu</string>
-
+    <string name="app_name">OptionalAndoptionMenu</string>
+    <string name="option_btn">Music</string>
+    <string name="option_allTracks">All Tracks</string>
+    <string name="option_playLists">PlayList</string>
+    <string name="option_albums">Albums</string>
+    <string name="option_artists">Artists</string>
+    <string name="option_genres">Genres</string>
+    <string name="option_composers">Composers</string>
+    <string name="option_years">Years</string>
+    <string name="context_shareTrack">ShareTrack 	-></string>
+    <string name="shareTrack_message">Message</string>
+    <string name="shareTrack_bluetooth">BlueTooth</string>
+    <string name="context_setAs">SetAs</string>
+    <string name="setAs_callerTone">CallerTone</string>
+    <string name="setAs_alarmTone">AlarmTone</string>
+    <string name="context_details">Details</string>
+    <string name="context_shuffle">Shuffle</string>
+    <string name="shuffle_on">On</string>
+    <string name="shuffle_off">Off</string>
+    <string name="allTracks">AllTracks Selected</string>
+    <string name="artists">Artists Selected</string>
+    <string name="genres">Genres Selected</string>
+    <string name="albums">Albums Selected</string>
+    <string name="years">Year of Song is Selected</string>
+	<string name="bluetooth">Send Via through Bluetooth is Selected</string>
+	<string name="message">Send Vial through Message is Selected</string>
+	<string name="callerTone">set To callerTone</string>
+	<string name="alarmTone">set To alarmTone</string>
+	<string name="on">Shuffle On</string>
+	<string name="off">Shuffle Off</string>
+	<string name="details">Song Details selected</string>
+	<string name="nothing">Nothing is Selected</string>
+	<string name="first_song">JaiHo_Rehman.mp3</string>
+	<string name="second_song">Friendship_Akon.mp3</string>
+	<string name="third_song">Dangerous_MichealJackson.mp3</string>
+	<string name="fourth_song">PitBull_MichealJackson.mp3</string>
+	<string name="fifth_song">YouKnowYoulikeit_JustinBiber.mp3</string>
+	<string name="songs">Songs List</string>
 </resources>

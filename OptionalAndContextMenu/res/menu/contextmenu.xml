@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    
+
+
+    <item
+        android:id="@+id/context_shareTrack"
+        android:title="@string/context_shareTrack">
+         <group  >
+             <menu > 
+                <item
+                    android:id="@+id/shareTrack_message"
+                    android:title="@string/shareTrack_message"/>
+                <item
+                    android:id="@+id/shareTrack_bluetooth"
+                    android:title="@string/shareTrack_bluetooth"/>
+               
+       		 </menu>
+         </group>
+    </item>
+    <item
+        android:id="@+id/context_setAs"
+        android:title="@string/context_setAs">
+        <group>
+        <menu>
+
+                <item
+                    android:id="@+id/setAs_callerTone"
+                    android:title="@string/setAs_callerTone"/>
+                <item
+                    android:id="@+id/setAs_alarmTone"
+                    android:title="@string/setAs_alarmTone"/>
+
+        </menu>
+        </group>
+    </item>
+    <item
+        android:id="@+id/context_details "
+        android:title="@string/context_details"/>
+    <item
+        android:id="@+id/context_shuffle "
+        android:title="@string/context_shuffle">
+        <menu>
+		<group>
+                <item
+                    android:id="@+id/suffle_on"
+                    android:title="@string/shuffle_on"/>
+                <item
+                    android:id="@+id/suffle_off"
+                    android:title="@string/shuffle_off"/>
+		</group>
+        </menu>
+    </item>
 
 </menu>
