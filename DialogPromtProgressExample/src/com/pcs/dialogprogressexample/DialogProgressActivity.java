@@ -87,7 +87,30 @@ public class DialogProgressActivity extends Activity{
 				 * displays Date when User Clicks on dateEdt TextField 
 				 * 
 				 */
-
+				nameEdt.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View arg0) {
+						refresh();
+						
+					}
+				});
+				mailEdt.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View arg0) {
+						refresh();
+						
+					}
+				});
+				phoneEdt.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View arg0) {
+						refresh();
+						
+					}
+				});
 				dateEdt.setOnClickListener(new OnClickListener() {
 
 					@Override
@@ -107,7 +130,9 @@ public class DialogProgressActivity extends Activity{
 						}, Year, Month, Day);
 						datePicker.setTitle(getResources().getString(R.string.date_title));
 						datePicker.show();
+						refresh();
 					}
+					
 				});
 
 				/***
@@ -130,42 +155,13 @@ public class DialogProgressActivity extends Activity{
 						}, hour, minute, true);
 						timePicker.setTitle(getResources().getString(R.string.time_title));
 						timePicker.show();
-
+						refresh();
 					}
 				});
 				/**
 				 * when Clicks on refreshBtn progress bar will automatically set the progress
 				 */
-				refreshBtn.setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						String name = nameEdt.getText().toString();
-						String mail = mailEdt.getText().toString();
-						String phone = phoneEdt.getText().toString();
-						String date = dateEdt.getText().toString();
-						String time = timeEdt.getText().toString();
-						Boolean nameBool = TextUtils.isEmpty(name);
-						Boolean mailBool = TextUtils.isEmpty(mail);
-						Boolean phoneBool = TextUtils.isEmpty(phone);
-						Boolean dateBool = TextUtils.isEmpty(date);
-						Boolean timeBool = TextUtils.isEmpty(time);
-						int nameField=1,mailField=1,phoneField=1,dateField=1,timeField=1;
-						if(nameBool)
-							nameField=0;
-						if(mailBool)
-							mailField=0;
-						if(phoneBool)
-							phoneField=0;
-						if(dateBool)
-							dateField=0;
-						if(timeBool)
-							timeField=0;
-						int result = nameField+mailField+phoneField+dateField+timeField;
-						progressBar.setProgress(result*20);
-
-					}
-				});
+					
 				/**
 				 * Entered Details are stored in listView when user clicks on enterBtn
 				 */
@@ -205,5 +201,31 @@ public class DialogProgressActivity extends Activity{
 			}
 
 		});
+	}
+	public void refresh() {
+		String name = nameEdt.getText().toString();
+		String mail = mailEdt.getText().toString();
+		String phone = phoneEdt.getText().toString();
+		String date = dateEdt.getText().toString();
+		String time = timeEdt.getText().toString();
+		Boolean nameBool = TextUtils.isEmpty(name);
+		Boolean mailBool = TextUtils.isEmpty(mail);
+		Boolean phoneBool = TextUtils.isEmpty(phone);
+		Boolean dateBool = TextUtils.isEmpty(date);
+		Boolean timeBool = TextUtils.isEmpty(time);
+		int nameField=1,mailField=1,phoneField=1,dateField=1,timeField=1;
+		if(nameBool)
+			nameField=0;
+		if(mailBool)
+			mailField=0;
+		if(phoneBool)
+			phoneField=0;
+		if(dateBool)
+			dateField=0;
+		if(timeBool)
+			timeField=0;
+		int result = nameField+mailField+phoneField+dateField+timeField;
+		progressBar.setProgress(result*20);
+
 	}
 }
