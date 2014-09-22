@@ -10,6 +10,9 @@ public class FragmentAndroid extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		/***
+		 * Returns the layout of webFragment
+		 */
 		return inflater.inflate(R.layout.fragment_android, container, false);
 	}
 
