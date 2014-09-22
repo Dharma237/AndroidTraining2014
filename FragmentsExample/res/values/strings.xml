@@ -1,5 +1,10 @@
 <resources>
 
     <string name="app_name">FragmentsExample</string>
-
+    <string name="ios_btn">iOS</string>
+    <string name="android_btn">Android</string>
+    <string name="web_btn">WebApps</string>
+    <string name="web">WebApps</string>
+    <string name="android">Android</string>
+    <string name="ios">iOS</string>
 </resources>
