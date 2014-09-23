@@ -28,7 +28,6 @@ public class MainActivity extends Activity{
 	private TextView genderTxt;
 	private TextView lastNameTxt;
 	private TextView firstNameTxt;
-	private TextView linkTxt;
 	private TextView nameTxt;
 	private StringBuilder stringBuilder;
 	private Context context;
@@ -47,7 +46,7 @@ public class MainActivity extends Activity{
 		genderTxt = (TextView)findViewById(R.id.gender_txt);
 		jsonBtn = (Button)findViewById(R.id.json_button);
 		jsonBtn.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				new DownloadFilePage(MainActivity.this).execute();				
@@ -56,7 +55,11 @@ public class MainActivity extends Activity{
 
 	}
 
-
+	/**
+	 * Arguments Params, Progress and Result
+	 * @author pcs02
+	 *
+	 */
 	private  class DownloadFilePage extends AsyncTask<String, Integer, String>
 	{
 		private ProgressDialog progressBar;
@@ -64,8 +67,11 @@ public class MainActivity extends Activity{
 			context = mainActivity;
 			progressBar = new ProgressDialog(context);
 			progressBar.setTitle(getResources().getString(R.string.json_download));
-			
+
 		}
+		/***
+		 * ProgressBar showing
+		 */
 
 		@Override
 		protected void onPreExecute() {
@@ -73,13 +79,20 @@ public class MainActivity extends Activity{
 			progressBar.show();
 			super.onPreExecute();
 		}
-
+		/***
+		 * Retrieves Facebook User Details from Server
+		 * URL should not be null
+		 * URL should not be incorrect
+		 * Throws MalformedURLException
+		 * Throws ClientProtocolException
+		 * Throws IOException
+		 */
 		@Override
 		protected String doInBackground(String... args)
 		{
 			URL url;
 			try {
-				url = new URL( "http://graph.facebook.com/12476");
+				url = new URL( "http://graph.facebook.com/645261812238752");
 				URLConnection con = url.openConnection();
 				con.connect();
 				InputStream inputStream = con.getInputStream();
@@ -115,7 +128,10 @@ public class MainActivity extends Activity{
 
 			super.onProgressUpdate(values[0]);
 		}
-
+		/***
+		 * Assigning received Data
+		 * Throws JSONException
+		 */
 		@Override
 		protected void onPostExecute(String result) {
 			JSONObject jsonObj;
@@ -124,28 +140,28 @@ public class MainActivity extends Activity{
 				jsonObj = new JSONObject(result);
 				if(jsonObj.has("first_name"))
 				{
-					 obj = jsonObj.getString("first_name");
-					 firstNameTxt.setText(getResources().getString(R.string.first_name)+ obj);
+					obj = jsonObj.getString("first_name");
+					firstNameTxt.setText(getResources().getString(R.string.first_name)+"\t"+ obj);
 				}
 				if(jsonObj.has("gender"))
 				{
-					 obj = jsonObj.getString("gender");
-					 genderTxt.setText((getResources().getString(R.string.gender)+obj));
+					obj = jsonObj.getString("gender");
+					genderTxt.setText((getResources().getString(R.string.gender)+"\t\t"+obj));
 				}
 				if(jsonObj.has("last_name"))
 				{
-					 obj = jsonObj.getString("last_name");
-					lastNameTxt.setText((getResources().getString(R.string.last_name)+obj));
+					obj = jsonObj.getString("last_name");
+					lastNameTxt.setText((getResources().getString(R.string.last_name)+"\t"+obj));
 				}
 				if(jsonObj.has("name"))
 				{
-					 obj = jsonObj.getString("name");
-					 nameTxt.setText((getResources().getString(R.string.name)+obj));
+					obj = jsonObj.getString("name");
+					nameTxt.setText((getResources().getString(R.string.name)+"\t\t"+obj));
 				}
 				if(jsonObj.has("id"))
 				{
-					 obj = jsonObj.getString("id");
-					 idTxt.setText((getResources().getString(R.string.id)+obj));
+					obj = jsonObj.getString("id");
+					idTxt.setText((getResources().getString(R.string.id)+""+obj));
 				}
 			} catch (JSONException e) {
 				e.printStackTrace();
