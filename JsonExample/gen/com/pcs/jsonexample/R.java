@@ -1097,21 +1097,25 @@ containing a value of this type.
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
-        public static final int display_txt=0x7f05003d;
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
+        public static final int firstName_txt=0x7f05003e;
+        public static final int gender_txt=0x7f05003f;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
+        public static final int id_txt=0x7f05003d;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int json_button=0x7f05003c;
+        public static final int lastName_txt=0x7f050040;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
+        public static final int name_txt=0x7f050041;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
@@ -1237,7 +1241,14 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int app_name=0x7f0a000d;
         public static final int download=0x7f0a000f;
-        public static final int json_button=0x7f0a0010;
+        public static final int fb_user=0x7f0a0012;
+        public static final int first_name=0x7f0a0013;
+        public static final int gender=0x7f0a0016;
+        public static final int id=0x7f0a0015;
+        public static final int json_button=0x7f0a0011;
+        public static final int json_download=0x7f0a0010;
+        public static final int last_name=0x7f0a0014;
+        public static final int name=0x7f0a0017;
         public static final int url_btn=0x7f0a000e;
     }
     public static final class style {
