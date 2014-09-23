@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JsonExample</string>
+    <string name="url_btn">Url Button</string>
+    <string name="download">DownLoading Page</string>
+	<string name="json_button">JSON Button</string>
+</resources>
