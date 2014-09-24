@@ -1,5 +1,7 @@
 <resources>
 
     <string name="app_name">JsonListView</string>
-
+    <string name="button">Click Here</string>
+    <string name="json_download">DownLoading Details</string>
+	 <string name="download">DownLoading Details from Server</string>
 </resources>

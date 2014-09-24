@@ -3,6 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+   <Button android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/button"
+    android:text="@string/button"
+    android:layout_margin="20dp"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:background="#FF85E0"
+    android:textStyle="bold"
+    />
+ <ListView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/list"
+    ></ListView>
 
 </LinearLayout>
