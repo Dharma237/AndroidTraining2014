@@ -3,15 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    
  <Button 
+     android:layout_marginTop="40dp"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:id="@+id/notification_btn"
-     android:text="@string/notification_btn"/>
+     android:id="@+id/msg_btn"
+     android:text="@string/msg_btn"
+     android:background="#858566"
+     android:layout_margin="10dp"
+     android:textSize="15sp"
+     android:padding="10dp"/>
  <Button 
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:id="@+id/download_btn"
-     android:text="@string/download_btn"/>
+     android:text="@string/download_btn"
+     android:background="#858566"
+     android:layout_margin="10dp"
+     android:textSize="15sp"
+     android:padding="10dp"/>
 
 </LinearLayout>

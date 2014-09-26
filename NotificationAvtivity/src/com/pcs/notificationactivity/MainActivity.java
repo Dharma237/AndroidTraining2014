@@ -17,17 +17,21 @@ import android.widget.Toast;
 import com.pcs.notificationavtivity.R;
 
 public class MainActivity extends Activity{
-	private Button notificationBtn;
+	private Button messageBtn;
 	private Button downloadBtn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//sets layout to the con
 		setContentView(R.layout.activity_main);
-		notificationBtn = (Button)findViewById(R.id.notification_btn);
+		messageBtn = (Button)findViewById(R.id.msg_btn);
 		downloadBtn = (Button)findViewById(R.id.download_btn);
-		
-		notificationBtn.setOnClickListener(new OnClickListener() {
+		/**
+		 * onclick listener to the messageBtn
+		 * When button clicks it will navigate to the BroadCast class
+		 */ 
+		messageBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
@@ -36,7 +40,10 @@ public class MainActivity extends Activity{
 				sendBroadcast(intent);
 			}
 		});
-		
+		/**
+		 * onclick listener to the downloadBtn
+		 * When button clicks it will navigate to the Download class
+		 */
 		downloadBtn.setOnClickListener(new OnClickListener() {
 
 			@Override

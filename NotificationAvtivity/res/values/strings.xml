@@ -1,6 +1,10 @@
 <resources>
 
     <string name="app_name">NotificationAvtivity</string>
-	<string name="notification_btn">Notification</string>
-	<string name="download_btn">Message</string>
+	<string name="msg_btn">Message</string>
+	<string name="download_btn">Download</string>
+	<string name="msg_txt">New One Message</string>
+	<string name="msg_title">New Message</string>
+	<string name="download_txt">Your Content is Downloading..</string>
+	<string name="download_title">New Download</string>
 </resources>
