@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">DatabaseActivity</string>
+    <string name="book_title">Enter Book Details</string>
+    <string name="addBook">Add NewBook</string>
+    <string name="showAllBook">Show All Books</string>
+    <string name="deleteAllBooks">Delete All Books</string>
+    <string name="bookName_edt">Book Name</string>
+    <string name="bookId_edt">Enter Book Id</string>
+    <string name="bookAuthor_edt"> Book Author</string>
+    <string name="book_inserted">New Book Inserted</string>
+     <string name="books_deleted">All Books Deleted</string>
+    <string name="book_error">Book Details should not be null</string>
+    <string name="nobooks">No Books Available..Please add new Book</string>
+    <string name="book_name">Book Name</string>
+    <string name="book_id">Book Id</string>
+    <string name="book_author">Book Author</string>
+
+</resources>

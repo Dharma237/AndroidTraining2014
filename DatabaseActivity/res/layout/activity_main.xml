@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<TextView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/book_title"
+	    android:background="#669900"
+        android:padding="5dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" 
+        android:gravity="center"
+	    />
+    <EditText
+        android:id="@+id/bookName_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/bookName_edt" 
+    />
+
+    <EditText
+        android:id="@+id/bookId_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/bookId_edt" />
+
+    <EditText
+        android:id="@+id/bookAuthor_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/bookAuthor_edt"/>
+    
+    <LinearLayout 
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/addBook_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addBook"
+        android:text="@string/addBook" 
+        android:background="#669900"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+   
+
+    <Button
+        android:id="@+id/showAllBooks_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showAllBooks"
+        android:text="@string/showAllBook"
+        android:background="#669900"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" 
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/deleteAllBooks_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="deleteAllBooks"
+        android:text="@string/deleteAllBooks" 
+        android:background="#669900"
+       android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+     </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:divider="#FFC2C2"
+        android:dividerHeight="3dp"
+        android:layout_margin="5dp"
+        />
+
+</LinearLayout>
