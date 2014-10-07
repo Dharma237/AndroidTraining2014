@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">ParcellableActivity</string>
+    <string name="city">Enter Your City</string>
+    <string name="hint_id">Enter Employee id:</string>
+    <string name="hint_name">Enter Employee Name:</string>
+    <string name="hint_designation">Enter Employee Designation</string>
+    <string name="image">Vodaphone Image</string>
+    <string name="title">Welcome To Paradigm Creatives</string>
+    <string name="id">Id</string>
+    <string name="name">Name</string>
+    <string name="designation">Designation</string>
+    <string name="login_title">Login to Paradigm Creatives</string>
+    <string name="login">Log In</string>
+
+</resources>
