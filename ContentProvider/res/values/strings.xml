@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">ContentProvider_insertRow</string>
+    <string name="name_hint">Contact Name</string>
+    <string name="mail_hint">Contact Mail</string>
+    <string name="address_hint">Home|Office</string>
+    <string name="phone_hint">Contact Phone Number</string>
+    <string name="id_hint">Contact Id</string>
+    <string name="add_btn">Add Information</string>
+
+</resources>
