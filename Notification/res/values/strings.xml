@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Notification</string>
+
+  <string name="title"> Android Exam</string>
+	<string name="message">Exam duration is 3 hours</string>	      
+	<string name="notification">Notification Screen</string>
+</resources>
