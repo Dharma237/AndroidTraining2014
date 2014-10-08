@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">WelcomeScreen</string>
+    <string name="mail">Email</string>
+    <string name="pwd">Password</string>
+    <string name="login">Log In</string>
+    <string name="forgot_pwd">Forgot Password?</string>
+    <string name="wrong_credentials">Your Credentials are Wrong</string>
+    <string name="right_credentials">Your Entered Credentials are Right</string>
+    <string name="empty_credentials">Your Credentials are should not be Empty</string>
+
+</resources>
