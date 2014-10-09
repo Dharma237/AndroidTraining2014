@@ -5,7 +5,13 @@
     <string name="mail_hint">Contact Mail</string>
     <string name="address_hint">Home|Office</string>
     <string name="phone_hint">Contact Phone Number</string>
+    <string name="id">Id:</string>
+    <string name="name">Name:</string>
+    <string name="email">Mail:</string>
+    <string name="address">Address:</string>
+    <string name="phone">Number:</string>
     <string name="id_hint">Contact Id</string>
     <string name="add_btn">Add Information</string>
+    <string name="customer">Customer Information</string>
 
 </resources>

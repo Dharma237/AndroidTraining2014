@@ -16,7 +16,7 @@ import android.net.Uri;
 public class MyContentProvider extends ContentProvider{
 	
 	public static final String PROVIDER_NAME = "com.pcs.contentprovider.MyContentProvider";
-	public static final String URL = "content://"+ PROVIDER_NAME + "/person";
+	public static final String URL ="content://"+PROVIDER_NAME+"/person";	// content://com.pcs.contentprovider.MyContentProvider/person
 	public static final Uri CONTENT_URI = Uri.parse(URL);
 	public static final String ID = "_id";
 	public static final String NAME = "_name";
@@ -64,6 +64,8 @@ public class MyContentProvider extends ContentProvider{
 		
 		
 		SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
+		
+		
 		queryBuilder.setTables(DatabaseHelper.TABLE_NAME);
 		
 		
@@ -119,7 +121,9 @@ public class MyContentProvider extends ContentProvider{
 		if(rowId>0)
 		{
 			Uri _uri = ContentUris.withAppendedId(CONTENT_URI, rowId);
+			
 			getContext().getContentResolver().notifyChange(_uri, null);
+			
 			return _uri;
 		}
 		
@@ -142,7 +146,7 @@ public class MyContentProvider extends ContentProvider{
 		
 		case URI_CODE:
 			
-			 count = db.delete(dbHelper.TABLE_NAME, selection, selectionArgs);
+			 count = db.delete(DatabaseHelper.TABLE_NAME, selection, selectionArgs);
 			
 			break;
 
@@ -163,6 +167,7 @@ public class MyContentProvider extends ContentProvider{
 		int count=0;
 		
 		switch (uriMatcher.match(uri)) {
+		
 		case URI_CODE:
 			
 			count = db.update(DatabaseHelper.TABLE_NAME, values, selection, selectionArgs);
