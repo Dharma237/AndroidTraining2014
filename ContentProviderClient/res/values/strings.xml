@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">ContentProviderClient</string>
+    <string name="id">Id:</string>
+    <string name="name">Name:</string>
+    <string name="mail">eMail:</string>
+    <string name="phone">PhoneNumber:</string>
+    <string name="address">Address:</string>
+    <string name="allPersons">Show All</string>
+    <string name="deletePersons">Delete All</string>
+    
+
+</resources>
