@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+  		android:text="@string/title"
+  		android:textColor="@color/teal"
+  		android:textSize="40sp"
+  		android:layout_marginLeft="20dp"
+  		android:textStyle="bold"
+  		android:layout_marginTop="60dp"
+  		android:id="@+id/title_txt"/>
+
+    <SlidingDrawer
+        android:id="@+id/sliding_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:content="@+id/sliding_content"
+        android:handle="@+id/sliding_handle"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/sliding_handle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1.2"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/slide" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="@string/sliding_title" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1.2"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/music" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sliding_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_teal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/jaiho" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:background="@color/teal"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                 >
+
+                <ImageView
+                    android:id="@+id/songRepeat_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/music_repeat"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:id="@+id/songPrevious_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/music_previous" />
+
+                <ImageView
+                    android:id="@+id/songStop_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/music_stop" />
+
+                <ImageView
+                    android:id="@+id/songNext_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/music_next" />
+
+                <ImageView
+                    android:id="@+id/songShuffle_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/music_shuffle" />
+            </LinearLayout>
+        </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>

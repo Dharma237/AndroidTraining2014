@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">SlidingDrawer</string>
+    <string name="slidingDrawer">SlidingDrawer</string>
+    <string name="sliding_title">JaiHo by A.R.Rehman</string>
+    <string name="songRepeat"> Songs Repeat Mode Selected</string>
+    <string name="songPrevious"> Previous Song Selected</string>
+    <string name="songStop">Song is Paused </string>
+    <string name="songNext">Next Song Selected</string>
+    <string name="songShuffle">Songs Shuffle Selected</string>
+    <string name="title">Sliding Drawer Example from Top to Bottom</string>
+
+</resources>
