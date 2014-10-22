@@ -70,7 +70,7 @@ public abstract class SwipeListViewActivity extends Activity{
 			@SuppressLint("ClickableViewAccessibility")
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-					
+
 
 				return gestureDetector.onTouchEvent(event);
 			}
