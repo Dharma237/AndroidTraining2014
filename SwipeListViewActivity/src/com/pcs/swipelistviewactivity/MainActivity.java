@@ -16,29 +16,45 @@ public class MainActivity extends SwipeListViewActivity{
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
+		
+		/***
+		 *
+		 * ArrayList<String> data = new ArrayList<String>();
+		data.add(getResources().getString(R.string.heading_dismissable_list_view));
+		data.add(object)
 
+		 */
+		
 		listView = (ListView)findViewById(R.id.list_view);
-
-		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
-				new String[] {"Item1","Item2","Item3","Item4","Item5"} );
+		
+		String[] data = getResources().getStringArray(R.array.name);
+		
+		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,data);
 		
 		listView.setAdapter(adapter);
 
 	}
 	
-	public ListView geListView()
-	{
-		return listView;
-		
-	}
-	
 	public void getSwipeItem(boolean isRight, int position) {
-	Toast.makeText(this,"Swipe to " + (isRight ? "right" : "left") + " direction", Toast.LENGTH_SHORT).show();
+		
+		if(isRight)
+		{
+			
+		}
+		else
+			
+		Toast.makeText(this,"Swipe to " + (isRight ? "right" : "left") + " direction", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void onItemClickListener(ListAdapter adapter,int position)
 	{
 		Toast.makeText(this, "Single tap on item position " + position,
 				Toast.LENGTH_SHORT).show();
+	}
+
+	@Override
+	public ListView getListView() {
+		// TODO Auto-generated method stub
+		return listView;
 	}
 }
