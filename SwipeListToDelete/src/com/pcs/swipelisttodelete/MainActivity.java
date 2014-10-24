@@ -16,7 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends SwipeListViewActivity{
+public class MainActivity extends SwipeDismissListViewTouchListener{
 
 	private ListView listView;
 	private ArrayAdapter<String> adapter;

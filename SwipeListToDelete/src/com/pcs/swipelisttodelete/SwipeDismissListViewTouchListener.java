@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-public abstract class SwipeListViewActivity extends Activity{
+public abstract class SwipeDismissListViewTouchListener extends Activity{
 
 	private ListView listview;
 	private int REL_SWIPE_MIN_DISTANCE;
