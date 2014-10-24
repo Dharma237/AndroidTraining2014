@@ -96,40 +96,54 @@ public abstract class SwipeDismissListViewTouchListener extends Activity{
 	class MyGestureDetector extends SimpleOnGestureListener{
 
 		private int temp_position=1;
+		
+		/***
+		 * When User SingleTap on ListView returns true
+		 * 
+		 */
 
 		public boolean onSingleTapUp(MotionEvent e)
 		{
 
 			int item_position = listview.pointToPosition((int)e.getX(), (int)e.getY());
+			
 			myOnItemClick(item_position);
 
 			return true;
 
 		}
-
-		public boolean onDown(MotionEvent e)
-		{
-
-			temp_position = listview.pointToPosition((int)e.getX(), (int)e.getY());
-			return super.onDown(e);
-		}
-
+		
+		/***
+		 * returns boolean either true or false
+		 * @pararms are MotionEvents e1,e2 and Velocity of x and y co-ordinates
+		 * 
+		 */
 		public boolean onFling(MotionEvent e1, MotionEvent e2, float VelocityX, float VelocityY)
 		{
-
+			
+			//returns true if greater than path
 			if(Math.abs(e1.getY()-e2.getY()) > REL_SWIPE_MAX_OFF_PATH)
 				return true;
+			
 
+			/**
+			 * returns the SwipeItem(boolean,position) if swiped distance greater than Distance and Velocity
+			 * Its for Left Swiping
+			 */
 			if(e1.getX() - e2.getX() > REL_SWIPE_MIN_DISTANCE && Math.abs(VelocityX)>REL_SWIPE_THRESOLD_VELOCITY)
 			{
 				int pos = listview.pointToPosition((int) e1.getX(), (int)e2.getY());
+				
 				if(pos>0 && temp_position==pos)
 				{
 					getSwipeItem(false, pos);
 				}
 			}
 			
-			
+			/**
+			 * returns the SwipeItem(boolean,position) if swiped distance greater than Distance and Velocity
+			 * Its for Right Swiping
+			 */
 			else if(e2.getX() - e1.getX() > REL_SWIPE_MIN_DISTANCE
 					&& Math.abs(VelocityX) > REL_SWIPE_THRESOLD_VELOCITY)
 			{

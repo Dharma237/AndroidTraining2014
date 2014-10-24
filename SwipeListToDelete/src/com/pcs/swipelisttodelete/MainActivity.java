@@ -3,13 +3,10 @@ package com.pcs.swipelisttodelete;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -94,7 +91,7 @@ public class MainActivity extends SwipeDismissListViewTouchListener{
 			public void onClick(DialogInterface dialog, int which) {
 				
 				alertDialog.dismiss();
-				Toast.makeText(getApplicationContext(),getResources().getString(R.string.deletion_cancel)+ adapter.getItem(position).toString(), Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(),adapter.getItem(position).toString()+ getResources().getString(R.string.deletion_cancel), Toast.LENGTH_LONG).show();
 			}
 		});
 		
