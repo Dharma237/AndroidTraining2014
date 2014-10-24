@@ -48,7 +48,9 @@ public class MainActivity extends SwipeListViewActivity{
 	
 	public void getSwipeItem(boolean isRight,  final int position) {
 		
-		if(isRight)
+		/****
+		 *
+		 * if(isRight)
 		{
 			layoutInflater = LayoutInflater.from(MainActivity.this);
 			View dialogView = layoutInflater.inflate(R.layout.delete_list_item, null);
@@ -70,13 +72,15 @@ public class MainActivity extends SwipeListViewActivity{
 			alertDialog.show();
 		}
 		else
-			
-		Toast.makeText(this,"Swipe to " + (isRight ? "right" : "left") + " direction", Toast.LENGTH_SHORT).show();
+
+		 */
+					
+		Toast.makeText(this,"Swipe " + (isRight ? "right to " : "left to ") + " Delete", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void onItemClickListener(ListAdapter adapter,int position)
 	{
-		Toast.makeText(this, "Single tap on item position " + position,
+		Toast.makeText(this, "Single tap on item position " + position , 
 				Toast.LENGTH_SHORT).show();
 	}
 
