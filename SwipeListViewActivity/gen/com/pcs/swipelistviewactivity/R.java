@@ -29,8 +29,14 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040000;
+        public static final int country=0x7f040008;
+        public static final int delete_title=0x7f040005;
+        public static final int deletion_cancel=0x7f040003;
+        public static final int deletion_true=0x7f040004;
         public static final int heading_dismissable_list_view=0x7f040002;
         public static final int heading_dismissable_views=0x7f040001;
+        public static final int no=0x7f040007;
+        public static final int yes=0x7f040006;
     }
     public static final class style {
         /** 

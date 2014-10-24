@@ -3,6 +3,12 @@
     <string name="app_name">SwipeListViewActivity</string>
     <string name="heading_dismissable_views">Simple Views</string>
     <string name="heading_dismissable_list_view">ListView</string>
+      <string name="deletion_cancel">List Item Deletion is Cancelled</string>
+    <string name="deletion_true">LisView is Removed</string>
+    <string name="delete_title">Delete Country: </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="country">Country</string>
     
     <string-array name="name">
         <item>India</item>

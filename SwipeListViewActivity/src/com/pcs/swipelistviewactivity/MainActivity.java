@@ -1,8 +1,11 @@
 package com.pcs.swipelistviewactivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,7 +43,7 @@ public class MainActivity extends SwipeListViewActivity{
 		listView = (ListView)findViewById(R.id.list_view);
 		
 		
-		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,data);
+		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,new ArrayList<String>(Arrays.asList(data)));
 		
 		listView.setAdapter(adapter);
 
@@ -74,8 +77,63 @@ public class MainActivity extends SwipeListViewActivity{
 		else
 
 		 */
-					
+		
+		
+		if(isRight)
+		{
+			
+		
+		//creating DialogBox
+		builder = new AlertDialog.Builder(MainActivity.this);
+		
+		//creating Message to the Dialog Box
+		builder.setMessage(getResources().getString(R.string.delete_title) 
+				+" ")
+		
+		/***
+		 * @param is position of list item
+		 * position should bound out of array
+		 * setting OnClickListener to the Positive Button in Dialog Box
+		 * if Pressed Positive Button then ListView is Deleted from the list
+		 */
+		.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				
+
+				adapter.remove(adapter.getItem(position));
+				
+				//getListAdapter().getItem(position).toString() 
+				
+				Toast.makeText(getApplicationContext(), getResources().getString(R.string.deletion_true),Toast.LENGTH_LONG).show();
+				
+				//dismissing the DialogBox
+				alertDialog.dismiss();
+				
+				}
+			})
+			
+			
+		/***
+		 * Setting Negative Button to the Dialog Box
+		 * creating OnClickListener to the Negative Button in Dialog Box
+		 */
+		.setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				
+				alertDialog.dismiss();
+				Toast.makeText(getApplicationContext(),getResources().getString(R.string.deletion_cancel), Toast.LENGTH_LONG).show();
+			}
+		});
+		alertDialog =builder.create();
+		alertDialog.show();
 		Toast.makeText(this,"Swipe " + (isRight ? "right to " : "left to ") + " Delete", Toast.LENGTH_SHORT).show();
+		}
+		else
+			Toast.makeText(this,"Swipe " + (isRight ? "right to " : "left to ") + " Delete", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void onItemClickListener(ListAdapter adapter,int position)

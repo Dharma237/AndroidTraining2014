@@ -1,5 +1,24 @@
 <resources>
 
     <string name="app_name">SwipeListToDelete</string>
-
+    <string name="deletion_cancel">List Item Deletion is Cancelled</string>
+    <string name="deletion_true">LisView is Removed</string>
+    <string name="delete_title">Delete Country: </string>
+    <string name="swipe_left">Please Swipe Right to Delete ListView</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="country">Country</string>
+	<string-array name="countries">
+	    <item >India</item>
+	    <item >America</item>
+	    <item >Australia</item>
+	    <item >England</item>
+	    <item >South Africa</item>
+	    <item >West Indies</item>
+	    <item >Sri Lanka</item>
+	    <item >Bangladesh</item>
+	    <item >Pakisthan</item>
+	    <item >China</item>
+	    <item >Russia</item>
+	</string-array>
 </resources>

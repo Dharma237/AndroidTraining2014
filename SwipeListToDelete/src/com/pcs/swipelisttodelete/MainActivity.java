@@ -3,115 +3,120 @@ package com.pcs.swipelisttodelete;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends ListActivity
-{
+public class MainActivity extends SwipeListViewActivity{
+
+	private ListView listView;
+	private ArrayAdapter<String> adapter;
+	private LayoutInflater layoutInflater;
 	private AlertDialog.Builder builder;
-	private LayoutInflater inflater;
 	private AlertDialog alertDialog;
+	private TextView deleteList_yes;
+	private TextView deleteList_no;
+	private ArrayList<String> data;
+	
 
-	ArrayAdapter<String> mAdapter;
-
-	public void onCreate(Bundle savedInstanceState)
-	{
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_main);
+		
+		
+	String[] data = getResources().getStringArray(R.array.countries);
+		 
+		
+		listView = (ListView)findViewById(R.id.list);
+		
+		
+		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,new ArrayList<String>(Arrays.asList(data)));
+		
+		listView.setAdapter(adapter);
 
-		// Set up ListView example
-		String[] items = new String[20];
-		for (int i = 0; i < items.length; i++)
+	}
+	
+	public void getSwipeItem(boolean isRight,  final int position) {
+		
+		if(isRight)
 		{
-			items[i] = "Item " + (i + 1);
+			
+		
+		//creating DialogBox
+		builder = new AlertDialog.Builder(MainActivity.this);
+		
+		//creating Message to the Dialog Box
+		builder.setMessage(getResources().getString(R.string.delete_title) 
+				+" "  + adapter.getItem(position).toString())
+		
+		/***
+		 * @param is position of list item
+		 * position should bound out of array
+		 * setting OnClickListener to the Positive Button in Dialog Box
+		 * if Pressed Positive Button then ListView is Deleted from the list
+		 */
+		.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				
+				//Removes Current Item
+				adapter.remove(adapter.getItem(position));
+				
+				//getListAdapter().getItem(position).toString() 
+				Toast.makeText(getApplicationContext(), getResources().getString(R.string.deletion_true),Toast.LENGTH_LONG).show();
+				
+				//dismissing the DialogBox
+				alertDialog.dismiss();
+				
+				}
+			})
+			
+			
+		/***
+		 * Setting Negative Button to the Dialog Box
+		 * creating OnClickListener to the Negative Button in Dialog Box
+		 */
+		.setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				
+				alertDialog.dismiss();
+				Toast.makeText(getApplicationContext(),getResources().getString(R.string.deletion_cancel)+ adapter.getItem(position).toString(), Toast.LENGTH_LONG).show();
+			}
+		});
+		
+		//creating alertDialog using Builder
+		alertDialog =builder.create();
+		
+		//displaying alertDialog
+		alertDialog.show();
 		}
-
-		mAdapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1,
-				android.R.id.text1,
-				new ArrayList<String>(Arrays.asList(items)));
-		setListAdapter(mAdapter);
-
-		ListView listView = getListView();
-		// Create a ListView-specific touch listener. ListViews are given special treatment because
-		// by default they handle touches for their list items... i.e. they're in charge of drawing
-		// the pressed state (the list selector), handling list item clicks, etc.
-		SwipeDismissListViewTouchListener touchListener =
-				new SwipeDismissListViewTouchListener(
-						listView,
-						new SwipeDismissListViewTouchListener.OnDismissCallback() {
-							@Override
-							public void onDismiss(ListView listView, int[] reverseSortedPositions) {
-								for (final int position : reverseSortedPositions) {
-									
-									//creating DialogBox
-									builder = new AlertDialog.Builder(MainActivity.this);
-									
-									//creating Message to the Dialog Box
-									builder.setMessage("Delete")
-									
-									/***
-									 * @param is position of list item
-									 * position should bound out of array
-									 * setting OnClickListener to the Positive Button in Dialog Box
-									 * if Pressed Positive Button then ListView is Deleted from the list
-									 */
-									.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-
-										@Override
-										public void onClick(DialogInterface dialog, int which) {
-											
-						
-											mAdapter.remove(mAdapter.getItem(position));
-											Toast.makeText(getApplicationContext(), "ListView is Removed",Toast.LENGTH_LONG).show();
-											
-											//dismissing the DialogBox
-											alertDialog.dismiss();
-											
-											}
-										})
-										
-										
-									/***
-									 * Setting Negative Button to the Dialog Box
-									 * creating OnClickListener to the Negative Button in Dialog Box
-									 */
-									.setNegativeButton("No", new DialogInterface.OnClickListener() {
-
-										@Override
-										public void onClick(DialogInterface dialog, int which) {
-											
-											alertDialog.dismiss();
-											Toast.makeText(getApplicationContext(), "List Item Deletion is Cancelled", Toast.LENGTH_LONG).show();
-										}
-									});
-
-								}
-								alertDialog = builder.create();
-								alertDialog.show();
-								mAdapter.notifyDataSetChanged();
-							}
-						});
-
-		listView.setOnTouchListener(touchListener);
-		// Setting this scroll listener is required to ensure that during ListView scrolling,
-		// we don't look for swipes.
-		listView.setOnScrollListener(touchListener.makeScrollListener());    
-
+		
+		else
+			Toast.makeText(this,getResources().getString(R.string.swipe_left), Toast.LENGTH_SHORT).show();
+	}
+	
+	public void onItemClickListener(ListAdapter adapter,int position)
+	{
+		Toast.makeText(this,adapter.getItem(position).toString() ,Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
-	protected void onListItemClick(ListView listView, View view, int position, long id)
-	{
-		Toast.makeText(this,
-				"Clicked " + getListAdapter().getItem(position).toString(),
-				Toast.LENGTH_SHORT).show();
+	public ListView getListView() {
+		// TODO Auto-generated method stub
+		return listView;
 	}
 }

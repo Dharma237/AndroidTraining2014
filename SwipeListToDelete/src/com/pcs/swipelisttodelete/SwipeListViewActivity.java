@@ -1,4 +1,4 @@
-package com.pcs.swipelistviewactivity;
+package com.pcs.swipelisttodelete;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
