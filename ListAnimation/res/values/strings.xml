@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">ListAnimation</string>
+    <string name="technologies_txt">Existing IT Technologies</string>
+	<string-array name="technologies">
+	    <item>Android</item>
+	    <item>iOS</item>
+	    <item>Web Apps</item>
+	    <item>Ruby on Rails</item>
+	    <item>Cloud Computing</item>
+	    <item>Windows</item>
+	    <item>VB.net</item>
+	    <item >Testing</item>
+	</string-array>
+</resources>
