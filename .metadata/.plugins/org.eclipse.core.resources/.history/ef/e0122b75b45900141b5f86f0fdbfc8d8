@@ -1,0 +1,6 @@
+package com.pcs.swipelistviewactivity;
+
+public class MainActivity extends SwipeListViewActivity{
+
+
+}

@@ -14,9 +14,9 @@ import android.widget.ListView;
 public abstract class SwipeDismissListViewTouchListener extends Activity{
 
 	private ListView listview;
-	private int REL_SWIPE_MIN_DISTANCE;
-	private int REL_SWIPE_MAX_OFF_PATH;
-	private int REL_SWIPE_THRESOLD_VELOCITY;
+	private int SWIPE_DISTANCE;	
+	private int SWIPE_PATH;
+	private int SWIPE_VELOCITY;
 
 	//returns listview
 	public abstract ListView getListView();
@@ -35,9 +35,9 @@ public abstract class SwipeDismissListViewTouchListener extends Activity{
 
 		DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
 
-		REL_SWIPE_MIN_DISTANCE = (int)(120.0f * displayMetrics.densityDpi/160.0f+0.5);
-		REL_SWIPE_MAX_OFF_PATH = (int)(120.0f * displayMetrics.densityDpi/160.0f+0.5);
-		REL_SWIPE_THRESOLD_VELOCITY = (int)(200.0f*displayMetrics.densityDpi/160.0f+0.5);
+		SWIPE_DISTANCE = (int)(120.0f * displayMetrics.densityDpi/160.0f+0.5);
+		SWIPE_PATH = (int)(120.0f * displayMetrics.densityDpi/160.0f+0.5);
+		SWIPE_VELOCITY = (int)(200.0f*displayMetrics.densityDpi/160.0f+0.5);
 
 
 	}
@@ -64,7 +64,7 @@ public abstract class SwipeDismissListViewTouchListener extends Activity{
 		 * Gesture Detector
 		 */
 		@SuppressWarnings("deprecation")
-		final GestureDetector gestureDetector = new GestureDetector(new MyGestureDetector());
+		final GestureDetector gestureDetector = new GestureDetector(new mGestureDetector());
 
 		View.OnTouchListener gestureListener  = new View.OnTouchListener() {
 
@@ -93,7 +93,7 @@ public abstract class SwipeDismissListViewTouchListener extends Activity{
 	}
 
 
-	class MyGestureDetector extends SimpleOnGestureListener{
+	class mGestureDetector extends SimpleOnGestureListener{
 
 		private int temp_position=1;
 		
@@ -122,15 +122,12 @@ public abstract class SwipeDismissListViewTouchListener extends Activity{
 		{
 			
 			//returns true if greater than path
-			if(Math.abs(e1.getY()-e2.getY()) > REL_SWIPE_MAX_OFF_PATH)
+			if(Math.abs(e1.getY()-e2.getY()) > SWIPE_PATH)
 				return true;
 			
 
-			/**
-			 * returns the SwipeItem(boolean,position) if swiped distance greater than Distance and Velocity
-			 * Its for Left Swiping
-			 */
-			if(e1.getX() - e2.getX() > REL_SWIPE_MIN_DISTANCE && Math.abs(VelocityX)>REL_SWIPE_THRESOLD_VELOCITY)
+			
+			if(e1.getX() - e2.getX() > SWIPE_DISTANCE && Math.abs(VelocityX)>SWIPE_VELOCITY)
 			{
 				int pos = listview.pointToPosition((int) e1.getX(), (int)e2.getY());
 				
@@ -144,8 +141,8 @@ public abstract class SwipeDismissListViewTouchListener extends Activity{
 			 * returns the SwipeItem(boolean,position) if swiped distance greater than Distance and Velocity
 			 * Its for Right Swiping
 			 */
-			else if(e2.getX() - e1.getX() > REL_SWIPE_MIN_DISTANCE
-					&& Math.abs(VelocityX) > REL_SWIPE_THRESOLD_VELOCITY)
+			else if(e2.getX() - e1.getX() > SWIPE_DISTANCE
+					&& Math.abs(VelocityX) > SWIPE_VELOCITY)
 			{
 				int pos = listview.pointToPosition((int) e1.getX(), (int) e2.getY());
 						if (pos >= 0 && temp_position == pos)

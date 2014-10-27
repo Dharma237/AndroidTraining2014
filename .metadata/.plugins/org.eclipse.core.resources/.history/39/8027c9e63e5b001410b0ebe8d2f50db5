@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">SwipeListToDelete</string>
+	<string-array name="countries">
+	    
+	</string-array>
+</resources>

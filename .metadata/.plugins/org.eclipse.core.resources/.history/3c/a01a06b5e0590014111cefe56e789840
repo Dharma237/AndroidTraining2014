@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">SwipeListViewActivity</string>
+    <string name="heading_dismissable_views">Simple Views</string>
+    <string name="country1">India</string>
+    <string name="country2">Bangladesh</string>
+    <string name="country3">Australia</string>
+    <string name="country4">England</string>
+
+</resources>

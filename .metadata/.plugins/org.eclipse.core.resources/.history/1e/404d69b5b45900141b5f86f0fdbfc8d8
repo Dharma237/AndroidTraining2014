@@ -1,0 +1,10 @@
+package com.pcs.swipelistviewactivity;
+
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class MainActivity extends SwipeListViewActivity{
+
+	private ListView listView;
+	private ArrayAdapter<String> adapter;
+}

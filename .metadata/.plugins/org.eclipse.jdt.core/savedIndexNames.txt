@@ -1,0 +1,7 @@
+INDEX VERSION 1.126+/home/pcs02/Dharma Workspace/SwipeListView/.metadata/.plugins/org.eclipse.jdt.core
+3623700019.index
+4186950902.index
+3034599516.index
+602736819.index
+557054513.index
+3558563900.index

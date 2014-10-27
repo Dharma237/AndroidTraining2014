@@ -1,0 +1,5 @@
+package com.pcs.swipelistviewactivity;
+
+public class SwipeDismissTouchListener {
+
+}

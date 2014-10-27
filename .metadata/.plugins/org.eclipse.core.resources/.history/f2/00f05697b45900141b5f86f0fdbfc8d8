@@ -1,0 +1,7 @@
+package com.pcs.swipelistviewactivity;
+
+public class MainActivity extends SwipeListViewActivity{
+
+	private ListView listView;
+	private ArrayAdapter<String> adapter;
+}

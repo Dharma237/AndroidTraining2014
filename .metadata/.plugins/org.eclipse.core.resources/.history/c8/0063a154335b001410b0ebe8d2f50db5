@@ -1,0 +1,5 @@
+package com.pcs.swipelisttodelete;
+
+public class SwipeDismissTouchListener {
+
+}

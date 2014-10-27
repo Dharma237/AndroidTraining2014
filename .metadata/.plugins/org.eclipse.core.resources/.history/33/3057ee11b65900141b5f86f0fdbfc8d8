@@ -1,0 +1,12 @@
+package com.pcs.swipelistviewactivity;
+
+import android.app.Activity;
+
+public class SwipeListViewActivity extends Activity{
+
+	public void getSwipeItem(boolean isRight, int position) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

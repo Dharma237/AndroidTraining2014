@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">SwipeListViewActivity</string>
+    <string name="heading_dismissable_views">Simple Views</string>
+    <string name="heading_dismissable_list_view">ListView</string>
+    
+    <string-array name="name">
+        <item>India</item>
+        <item>Australia</item>
+        <item>England</item>
+        <item>SouthAfrica</item>
+        <item>Brazil</item>
+        
+    </string-array>
+
+</resources>
