@@ -10,9 +10,11 @@ package com.pcs.animationsonview;
 public final class R {
     public static final class anim {
         public static final int fade_animation=0x7f040000;
-        public static final int rotate_animation=0x7f040001;
-        public static final int translate_animation=0x7f040002;
-        public static final int zoom_animation=0x7f040003;
+        public static final int pushup_animation=0x7f040001;
+        public static final int rotate_animation=0x7f040002;
+        public static final int shake_animation=0x7f040003;
+        public static final int top_to_bottom_animation=0x7f040004;
+        public static final int zoom_animation=0x7f040005;
     }
     public static final class attr {
     }
@@ -22,11 +24,14 @@ public final class R {
         public static final int sky=0x7f020002;
     }
     public static final class id {
-        public static final int animate_img=0x7f070005;
+        public static final int animate_img=0x7f070008;
         public static final int fadeInOut_btn=0x7f070003;
         public static final int layout=0x7f070000;
+        public static final int layout_animation=0x7f070001;
+        public static final int pushUp_btn=0x7f070007;
         public static final int rotate_btn=0x7f070004;
-        public static final int test=0x7f070001;
+        public static final int shake_btn=0x7f070006;
+        public static final int topToBottm_btn=0x7f070005;
         public static final int zoomInOut_btn=0x7f070002;
     }
     public static final class layout {
@@ -36,7 +41,10 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int fade_btn=0x7f050002;
         public static final int image=0x7f050004;
+        public static final int pushUp_btn=0x7f050007;
         public static final int rotate_btn=0x7f050003;
+        public static final int shake_btn=0x7f050006;
+        public static final int topToBottom_btn=0x7f050005;
         public static final int zoom_btn=0x7f050001;
     }
     public static final class style {

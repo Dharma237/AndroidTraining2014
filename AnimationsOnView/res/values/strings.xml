@@ -5,5 +5,9 @@
     <string name="fade_btn">Fade</string>
     <string name="rotate_btn">Rotate</string>
     <string name="image">Animate Image</string>
+    <string name="topToBottom_btn">TopBottom</string>
+    <string name="shake_btn">Shake</string>
+    <string name="pushUp_btn">PushUp</string>
+    
 
 </resources>
