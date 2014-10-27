@@ -1,5 +1,9 @@
 <resources>
 
     <string name="app_name">AnimationsOnView</string>
+    <string name="zoom_btn">Zoom</string>
+    <string name="fade_btn">Fade</string>
+    <string name="rotate_btn">Rotate</string>
+    <string name="image">Animate Image</string>
 
 </resources>
