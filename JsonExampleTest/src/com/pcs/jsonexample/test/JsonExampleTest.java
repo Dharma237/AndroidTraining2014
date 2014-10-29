@@ -14,13 +14,6 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 
 	private TextView firstName_Txt, lastName_Txt,gender_Txt,name_Txt;
 	private Button download_Btn;
-	
-	/***
-	 * "http://graph.facebook.com/12345"
-	 */
-	public static final String USER_DATA ="{\"id\":\"12345\",\"first_name\":\"Eli\"," +
-			"\"username\":\"eli.richlin\",\"name\":\"Eli Richlin\"," +
-			"\"last_name\":\"Richlin\",\"gender\":\"male\"}";
 
 	private MainActivity mContext;
 
@@ -63,6 +56,7 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 		assertNotNull("Can't find a Button view... Has Layout Changed?", download_Btn);
 
 	}
+	
 	/***
 	 * checks for retrieved Json Data is null or not through DownloadButton
 	 * if Null then it will shows error
@@ -87,18 +81,6 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 		boolean actual = true;
 		assertEquals(expected, actual);
 
-	}
-
-	/***
-	 * Checks for Retrieved data and Actual Data
-	 * if result of comparison is false then shows error
-	 */
-	public void testValidateData()
-	{
-		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
-		String actual = mContext.jsonObj.toString();
-		String expected = USER_DATA;
-		assertEquals(expected, actual);
 	}
 
 	/***

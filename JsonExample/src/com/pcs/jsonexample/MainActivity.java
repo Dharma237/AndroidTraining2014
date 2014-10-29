@@ -172,7 +172,7 @@ public class MainActivity extends Activity{
 			try {
 				jsonObj = new JSONObject(result);
 
-				if(jsonObj==null)
+				if(jsonObj.toString()==null)
 				{
 					Toast.makeText(context, "Json Data is Null", Toast.LENGTH_LONG).show();
 				}
