@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JsonExample</string>
+    <string name="url_btn">Url Button</string>
+    <string name="download">DownLoading Facebook User Details</string>
+    <string name="json_download">Json Page Details Downloader</string>
+    <string name="json_button">JSON Button</string>
+    <string name="fb_user">Facebook User Details</string>
+    <string name="first_name">FirstName:-</string>
+    <string name="last_name">LastName:-</string>
+    <string name="id">Facebook Id:-</string>
+    <string name="gender">Gender:-</string>
+    <string name="name">Name:-</string>
+
+</resources>
