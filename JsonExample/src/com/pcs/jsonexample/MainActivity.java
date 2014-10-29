@@ -104,7 +104,7 @@ public class MainActivity extends Activity{
 			URL url;
 			try {
 
-				url = new URL( "http://json.bubblemix.net/ws/qPfRb");
+				url = new URL("http://graph.facebook.com/645261812238752");
 				URLConnection con = url.openConnection();
 				con.connect();
 

@@ -14,10 +14,13 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 
 	private TextView firstName_Txt, lastName_Txt,gender_Txt,name_Txt;
 	private Button download_Btn;
-	public static final String USER_DATA ="{\"id\":\"591658927624314\",\"first_name\":\"Anitha\"," +
-			"\"username\":\"anitha.honey784\",\"name\":\"Anitha Honey\",\"locale\":\"en_US\"," +
-			"\"link\":\"https:\\/\\/www.facebook.com\\/anitha.honey784\"," +
-			"\"last_name\":\"Honey\",\"gender\":\"female\"}";
+	
+	/***
+	 * "http://graph.facebook.com/12345"
+	 */
+	public static final String USER_DATA ="{\"id\":\"12345\",\"first_name\":\"Eli\"," +
+			"\"username\":\"eli.richlin\",\"name\":\"Eli Richlin\"," +
+			"\"last_name\":\"Richlin\",\"gender\":\"male\"}";
 
 	private MainActivity mContext;
 
@@ -80,7 +83,7 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 	public void testNoFieldName()
 	{
 		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
-		boolean expected = mContext.jsonObj.has("firstName");
+		boolean expected = mContext.jsonObj.has("last_name");
 		boolean actual = true;
 		assertEquals(expected, actual);
 
