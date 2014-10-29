@@ -31,6 +31,7 @@ public class MainActivity extends Activity{
 	private TextView nameTxt;
 	private StringBuilder stringBuilder;
 	private Context context;
+	public JSONObject jsonObj;
 
 
 	@Override
@@ -92,7 +93,7 @@ public class MainActivity extends Activity{
 		{
 			URL url;
 			try {
-				url = new URL( "http://graph.facebook.com/645261812238752");
+				url = new URL( "http://json.bubblemix.net/ws/WBbnG");
 				URLConnection con = url.openConnection();
 				con.connect();
 				InputStream inputStream = con.getInputStream();
@@ -134,7 +135,6 @@ public class MainActivity extends Activity{
 		 */
 		@Override
 		protected void onPostExecute(String result) {
-			JSONObject jsonObj;
 			String obj = null;
 			try {
 				jsonObj = new JSONObject(result);
@@ -143,11 +143,11 @@ public class MainActivity extends Activity{
 					obj = jsonObj.getString("first_name");
 					firstNameTxt.setText(getResources().getString(R.string.first_name)+"\t"+ obj);
 				}
-				if(jsonObj.has("gender"))
-				{
-					obj = jsonObj.getString("gender");
-					genderTxt.setText((getResources().getString(R.string.gender)+"\t\t"+obj));
-				}
+//				if(jsonObj.has("gender"))
+//				{
+//					obj = jsonObj.getString("gender");
+//					genderTxt.setText((getResources().getString(R.string.gender)+"\t\t"+obj));
+//				}
 				if(jsonObj.has("last_name"))
 				{
 					obj = jsonObj.getString("last_name");

@@ -1,5 +1,7 @@
 package com.pcs.jsonexample.test;
 
+import org.json.JSONObject;
+
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.widget.Button;
@@ -12,6 +14,11 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 
 	private TextView firstName_Txt, lastName_Txt,gender_Txt,name_Txt;
 	private Button download_Btn;
+	public static final String USER_DATA ="{\"id\":\"591658927624314\",\"first_name\":\"Anitha\"," +
+			"\"username\":\"anitha.honey784\",\"name\":\"Anitha Honey\",\"locale\":\"en_US\"," +
+			"\"link\":\"https:\\/\\/www.facebook.com\\/anitha.honey784\"," +
+			"\"last_name\":\"Honey\",\"gender\":\"female\"}";
+
 	private MainActivity mContext;
 
 	@SuppressWarnings("deprecation")
@@ -52,5 +59,28 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 	public void testButton()
 	{
 		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
+
+		//if jsonObj is null then it will prints gettingResponse is null
+		JSONObject data = mContext.jsonObj;
+		assertNotNull("getting Response is null", data);
+	}
+	
+	/***
+	 * R9MUW5T,GETFC50
+	 */
+	public void testValidateData()
+	{
+		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
+		String actual = mContext.jsonObj.toString();
+		String expected = USER_DATA;
+		assertEquals(expected, actual);
+	}
+	
+	public void testTextFieldCheck()
+	{
+		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
+		String actual = gender_Txt.getText().toString();
+		String expected = "female";
+		assertEquals(expected, actual);
 	}
 }
