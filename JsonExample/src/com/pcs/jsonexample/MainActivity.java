@@ -5,10 +5,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.net.URLConnection;
 
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -17,10 +21,12 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity{
 	private Button jsonBtn;
@@ -39,6 +45,7 @@ public class MainActivity extends Activity{
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
+
 
 		idTxt = (TextView)findViewById(R.id.id_txt);
 		nameTxt = (TextView)findViewById(R.id.name_txt);
@@ -64,10 +71,12 @@ public class MainActivity extends Activity{
 	private  class DownloadFilePage extends AsyncTask<String, Integer, String>
 	{
 		private ProgressDialog progressBar;
+
 		public DownloadFilePage(MainActivity mainActivity) {
 			context = mainActivity;
 			progressBar = new ProgressDialog(context);
 			progressBar.setTitle(getResources().getString(R.string.json_download));
+
 
 		}
 		/***
@@ -91,17 +100,28 @@ public class MainActivity extends Activity{
 		@Override
 		protected String doInBackground(String... args)
 		{
+			final String TAG = "MainActivity.class";
 			URL url;
 			try {
-				url = new URL( "http://json.bubblemix.net/ws/WBbnG");
+
+				url = new URL( "http://json.bubblemix.net/ws/qPfRb");
 				URLConnection con = url.openConnection();
 				con.connect();
+
+				//setting TimeOut for the connection
+				HttpParams httpParams = new BasicHttpParams();
+				HttpConnectionParams.setConnectionTimeout(httpParams, 3000);
+				HttpConnectionParams.setSoTimeout(httpParams, 3000);
+
+				//Retrieving Data from the Server using Connection Object
 				InputStream inputStream = con.getInputStream();
 				InputStreamReader isReader = new InputStreamReader(inputStream);
 				BufferedReader reader = new BufferedReader(isReader);
+
 				stringBuilder = new StringBuilder();
 				String line = null;
 				int i=1;
+
 				while((line=reader.readLine())!=null)
 				{
 					progressBar.setProgress(i*100/10);
@@ -109,17 +129,30 @@ public class MainActivity extends Activity{
 				}
 
 			} 
+
 			catch (MalformedURLException e1) {
 				e1.printStackTrace();
-			}catch (ClientProtocolException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
+			}
+
+			catch (ClientProtocolException e) {
+				Log.e( TAG, "Http Error",e);
+			}
+
+			catch(SocketTimeoutException e){
+				Log.e(TAG, "Time Out", e);
+			}
+
+			catch (IOException e) {
 				e.printStackTrace();
 			}
+
+
 			if(stringBuilder.toString()==null)
 			{
 				progressBar.dismiss();
 			}
+
+			//returning the Retrieved Data
 			return stringBuilder.toString();
 
 		}
@@ -138,31 +171,46 @@ public class MainActivity extends Activity{
 			String obj = null;
 			try {
 				jsonObj = new JSONObject(result);
-				if(jsonObj.has("first_name"))
+
+				if(jsonObj==null)
 				{
-					obj = jsonObj.getString("first_name");
-					firstNameTxt.setText(getResources().getString(R.string.first_name)+"\t"+ obj);
+					Toast.makeText(context, "Json Data is Null", Toast.LENGTH_LONG).show();
 				}
-//				if(jsonObj.has("gender"))
-//				{
-//					obj = jsonObj.getString("gender");
-//					genderTxt.setText((getResources().getString(R.string.gender)+"\t\t"+obj));
-//				}
-				if(jsonObj.has("last_name"))
+				else
 				{
-					obj = jsonObj.getString("last_name");
-					lastNameTxt.setText((getResources().getString(R.string.last_name)+"\t"+obj));
+
+					if(jsonObj.has("first_name"))
+					{
+						obj = jsonObj.getString("first_name");
+						firstNameTxt.setText(getResources().getString(R.string.first_name)+"\t"+ obj);
+					}
+
+					if(jsonObj.has("gender"))
+					{
+						obj = jsonObj.getString("gender");
+						genderTxt.setText((getResources().getString(R.string.gender)+"\t\t"+obj));
+					}
+
+					if(jsonObj.has("last_name"))
+					{
+						obj = jsonObj.getString("last_name");
+						lastNameTxt.setText((getResources().getString(R.string.last_name)+"\t"+obj));
+					}
+
+					if(jsonObj.has("name"))
+					{
+						obj = jsonObj.getString("name");
+						nameTxt.setText((getResources().getString(R.string.name)+"\t\t"+obj));
+					}
+
+					if(jsonObj.has("id"))
+					{
+						obj = jsonObj.getString("id");
+						idTxt.setText((getResources().getString(R.string.id)+""+obj));
+					}
+
 				}
-				if(jsonObj.has("name"))
-				{
-					obj = jsonObj.getString("name");
-					nameTxt.setText((getResources().getString(R.string.name)+"\t\t"+obj));
-				}
-				if(jsonObj.has("id"))
-				{
-					obj = jsonObj.getString("id");
-					idTxt.setText((getResources().getString(R.string.id)+""+obj));
-				}
+
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}

@@ -46,6 +46,10 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 
 	}
 
+	/***
+	 * PreConditions for all the TextFields,Context,Buttons are present or not
+	 * if Not then displays Error
+	 */
 	public void testPreConditions(){
 
 		assertNotNull("Failed to access activity context",this.getActivity());
@@ -56,17 +60,35 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 		assertNotNull("Can't find a Button view... Has Layout Changed?", download_Btn);
 
 	}
+	/***
+	 * checks for retrieved Json Data is null or not through DownloadButton
+	 * if Null then it will shows error
+	 */
 	public void testButton()
 	{
 		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
-
 		//if jsonObj is null then it will prints gettingResponse is null
 		JSONObject data = mContext.jsonObj;
 		assertNotNull("getting Response is null", data);
 	}
-	
+
 	/***
-	 * R9MUW5T,GETFC50
+	 * Checks for Field(eg:FirstName of User) in the retrieved Data
+	 * if Field is not there then it will shows Error
+	 */
+
+	public void testNoFieldName()
+	{
+		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
+		boolean expected = mContext.jsonObj.has("firstName");
+		boolean actual = true;
+		assertEquals(expected, actual);
+
+	}
+
+	/***
+	 * Checks for Retrieved data and Actual Data
+	 * if result of comparison is false then shows error
 	 */
 	public void testValidateData()
 	{
@@ -75,12 +97,16 @@ public class JsonExampleTest extends ActivityInstrumentationTestCase2<MainActivi
 		String expected = USER_DATA;
 		assertEquals(expected, actual);
 	}
-	
+
+	/***
+	 * Checks for gender field in the Retrieved Data to actual null 
+	 * If result of comparison fails then shows TextFieldCheckError
+	 */
 	public void testTextFieldCheck()
 	{
 		TouchUtils.clickView(JsonExampleTest.this, download_Btn);
 		String actual = gender_Txt.getText().toString();
-		String expected = "female";
+		String expected = "";
 		assertEquals(expected, actual);
 	}
 }
