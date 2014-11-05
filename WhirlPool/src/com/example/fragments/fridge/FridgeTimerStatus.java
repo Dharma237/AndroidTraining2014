@@ -2,17 +2,16 @@ package com.example.fragments.fridge;
 
 import com.example.whirlpool.R;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FridgeTimerStatus extends Fragment{
+public class FridgeTimerStatus extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.fridge_timer_status, container);
+		return inflater.inflate(R.layout.fridge_timer_status, container,false);
 	}
-
 }

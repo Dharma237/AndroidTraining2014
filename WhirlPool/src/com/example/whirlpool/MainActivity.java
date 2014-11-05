@@ -158,12 +158,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		fastSettingsButtonSelected();
 		break;
 		
-	}
-		
-		getSupportFragmentManager().beginTransaction()
-		.replace(R.id.home_menu_container, fragments).commit();
-		
-
+	} getSupportFragmentManager().beginTransaction()
+	   .replace(R.id.home_menu_container, fragments).commit();
 	}
 
 

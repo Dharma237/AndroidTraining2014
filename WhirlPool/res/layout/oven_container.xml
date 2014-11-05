@@ -4,38 +4,36 @@
     android:layout_height="match_parent"
     android:background="@color/light_grey"
     android:orientation="vertical" >
+
     <fragment
-        android:id="@+id/oven_status_fragment"
+        android:id="@+id/status_fragment"
         android:name="com.example.fragments.oven.OvenStatus"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_weight="1"
-        /> 
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/oven_timer_status_fragment"
+        android:id="@+id/timer_status_fragment"
         android:name="com.example.fragments.oven.OvenTimerStatus"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_weight="2"
-         />
+        android:layout_marginTop="10dp"
+        android:layout_weight="2" />
 
     <fragment
-        android:id="@+id/fridge_warning_status_fragment"
+        android:id="@+id/warnings_fragment"
         android:name="com.example.fragments.oven.OvenWarningStatus"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-          android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-         />
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

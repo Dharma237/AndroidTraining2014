@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/fragment_border"
     android:orientation="vertical" >
-    
-<TextView
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/oven_status_fragment"
         android:gravity="center" />
+
 </LinearLayout>
