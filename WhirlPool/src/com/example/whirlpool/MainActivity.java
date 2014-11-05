@@ -92,80 +92,82 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		
-		
+
+
 		case R.id.home_fridge_menu_btn:
-			
-			//visibility gone for HomeContentAreaLayout
-			homeContentAreaLayout.setVisibility(View.GONE);
-			
-			//Fragment to fridge_menu_Content
+
+			visibilityofHomeData();
+
 			fragments = new FridgeContainer();
 
+			slideDrawerOpened();
 
-			if (!slideDrawer.isOpened()) {
-
-				slideDrawer.animateOpen();
-			}
-			
-			
 			fridgeButtonSelected();
-			
+
 			break;
-			
-			
+
+
 		case R.id.home_oven_menu_btn:
-			
-			homeContentAreaLayout.setVisibility(View.GONE);
+
+			visibilityofHomeData();
 
 			fragments = new OvenContainer();
 
-			if (!slideDrawer.isOpened()) {
-				slideDrawer.animateOpen();
-			}
+			slideDrawerOpened();
+
 			ovenButtonSelected();
 
 			break;
-		
+
 		case R.id.home_settings_menu_btn:
-			
-			homeContentAreaLayout.setVisibility(View.GONE);
+
+			visibilityofHomeData();
 
 			fragments = new FridgeOrOvenContainer();
 
-
-			if (!slideDrawer.isOpened()) {
-
-				slideDrawer.animateOpen();
-			}
+			slideDrawerOpened();
 
 			settingsButtonSelected();
+
 			break;
-			
-		
-	case R.id.home_fast_settings_menu_btn:
+
+
+		case R.id.home_fast_settings_menu_btn:
+
+			visibilityofHomeData();
+
+			fragments = new FridgeOrOvenContainer();
+
+			slideDrawerOpened();
+
+			fastSettingsButtonSelected();
+
+			break;
+
+		} getSupportFragmentManager().beginTransaction()
+		.replace(R.id.home_menu_container, fragments).commit();
+	}
+
+
+	private void visibilityofHomeData() {
 		
 		homeContentAreaLayout.setVisibility(View.GONE);
 
-		fragments = new FridgeOrOvenContainer();
+	}
 
 
-		if (!slideDrawer.isOpened()) {
+	private void slideDrawerOpened() 
+	{
 
+		if (!slideDrawer.isOpened()) 
 			slideDrawer.animateOpen();
-		}
-
-		fastSettingsButtonSelected();
-		break;
-		
-	} getSupportFragmentManager().beginTransaction()
-	   .replace(R.id.home_menu_container, fragments).commit();
 	}
 
 
 	@SuppressWarnings("deprecation")
-	private void settingsButtonSelected() {
-		
+	private void settingsButtonSelected() 
+	{
+
 		settingsBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border_remove));
 		fridgeBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border));
 		ovenBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border));
@@ -174,7 +176,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 
 
 	@SuppressWarnings("deprecation")
-	private void fridgeButtonSelected() {
+	private void fridgeButtonSelected() 
+	{
 		//		homeMenuContentAreaLayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border_remove));
 		fridgeBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border_remove));
 		ovenBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border));
@@ -183,7 +186,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 	}
 
 	@SuppressWarnings("deprecation")
-	private void ovenButtonSelected() {
+	private void ovenButtonSelected() 
+	{
 
 		ovenBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border_remove));
 		fridgeBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border));
@@ -193,7 +197,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 
 
 	@SuppressWarnings("deprecation")
-	private void fastSettingsButtonSelected() {
+	private void fastSettingsButtonSelected() 
+	{
 
 		fastSettingsBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border_remove));
 		fridgeBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border));
@@ -213,12 +218,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 				if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE
 						&& Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
 					slideDrawer.animateOpen();
-					homeMenuContentAreaLayout.setLayoutParams(new LinearLayout.LayoutParams(1080, 400));
 					fridgeBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border_remove));
 					return true;
 				} else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE
 						&& Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-					
+
 					slideDrawer.animateClose();
 					homeContentAreaLayout.setVisibility(View.VISIBLE);
 					fridgeBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border));
