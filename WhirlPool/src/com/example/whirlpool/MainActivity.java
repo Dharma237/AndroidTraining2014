@@ -12,16 +12,19 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
+import com.example.fragments.fastsettings.FastSettingsContainer;
 import com.example.fragments.fridge.FridgeContainer;
 import com.example.fragments.fridgeoroven.FridgeOrOvenContainer;
 import com.example.fragments.homedata.HomeData;
 import com.example.fragments.oven.OvenContainer;
+import com.example.fragments.settings.SettingsContainer;
 
 public class MainActivity extends FragmentActivity implements OnClickListener{
 	private VerticalButton fridgeBtn;
 	private VerticalButton ovenBtn;
 	private VerticalButton fastSettingsBtn;
 	private VerticalButton settingsBtn;
+	
 	private LinearLayout homeMenuContentAreaLayout,homeContentAreaLayout;
 	private com.example.whirlpool.SlidingDrawerFragment slideDrawer;
 
@@ -31,7 +34,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 	private GestureDetector gestureDetector;
 	private View.OnTouchListener gestureListener;
 
-	private Fragment fragments;
+	private Fragment fragments,fridgeWarningFragment,ovenWarningFragment;
 
 	@SuppressLint("ClickableViewAccessibility")
 	@Override
@@ -123,7 +126,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 
 			visibilityofHomeData();
 
-			fragments = new FridgeOrOvenContainer();
+			fragments = new SettingsContainer();
 
 			slideDrawerOpened();
 
@@ -136,7 +139,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 
 			visibilityofHomeData();
 
-			fragments = new FridgeOrOvenContainer();
+			fragments = new FastSettingsContainer();
 
 			slideDrawerOpened();
 
@@ -206,8 +209,25 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		ovenBtn.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_border));
 	}
 
-
-
+	public void onBackPressed()
+	{
+	/***
+	* Checks for is slidingDrawer is opened or not
+	* If opens it closes the sliding Drawer
+	*/
+	if(slideDrawer.isOpened())
+	{
+		slideDrawer.close();
+		homeContentAreaLayout.setVisibility(View.VISIBLE);
+	
+	}
+	//if sliding bar is not open then it will not close
+	else
+	super.onBackPressed();
+	}
+	
+	
+	
 	class MyGestureDetector extends SimpleOnGestureListener {
 		@SuppressWarnings("deprecation")
 		@Override

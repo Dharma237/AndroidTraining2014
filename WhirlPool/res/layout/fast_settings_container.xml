@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/fast_settings_alerts"
+        android:name="com.example.fragments.fastsettings.FastSettingsAlerts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fast_settings_setSounds"
+        android:name="com.example.fragments.fastsettings.FastSettingsSetSounds"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fast_settings_alerts_setDateorTime"
+        android:name="com.example.fragments.fastsettings.FastSettingsSetDateOrTime"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fast_settings_alerts_setPhoto"
+        android:name="com.example.fragments.fastsettings.FastSettingsSetPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fast_settings_alerts_specialPhotos"
+        android:name="com.example.fragments.fastsettings.FastSettingsSpecialProfiles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:id="@+id/fast_settings_extra1"
+        android:name="com.example.fragments.fastsettings.FastSettingsSpecialProfiles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_weight="1" />
+
+</LinearLayout>
