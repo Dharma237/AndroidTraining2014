@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AndroidFacebookConnectActivity!</string>
+    <string name="app_name">AndroidFacebookConnect</string>
+    <string name="fb_name">Logged into Fb</string>
+    <string name="fb_not_installed">Facebook is Not Installed</string>
+    <string name="logout">LogOut</string>
+    <string name="uName">UserName</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">LastName</string>
+    <string name="mail">eMail</string>
+    <string name="gender">Gender</string>
+    <string name="token">Token</string>
+    <string name="location">Location</string>
+    <string name="pwd">Password</string>
+    <string name="login">Login</string>
+</resources>

@@ -2,5 +2,8 @@
 
     <string name="app_name">CSIIITN</string>
     <string name="app_id">587075374731392</string>
+    <string name="profile_data">Profile Information</string>
+    <string name="fb_name">Fb Logged In</string>
+    <string name="fb_not_installed">Facebook is Not Installed</string>
 
 </resources>

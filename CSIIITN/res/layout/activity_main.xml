@@ -5,13 +5,17 @@
     android:orientation="vertical" >
 
     <ImageView
-        android:layout_marginTop="20dp"
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/login"
-        android:contentDescription="login" />
+        android:layout_marginTop="20dp"
+        android:src="@drawable/login" />
 
+    <Button
+        android:id="@+id/profileInformation_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name" />
 
 
 </LinearLayout>
