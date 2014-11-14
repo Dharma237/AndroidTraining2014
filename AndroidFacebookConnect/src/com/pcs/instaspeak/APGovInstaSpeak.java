@@ -8,8 +8,8 @@ import com.pcs.constants.FacebookUserDetails;
 
 public class APGovInstaSpeak extends Activity{
 	
-	private TextView fbUserNameTxt,fbUserName,fbMailTxt,fbMail,fbGenderTxt,fbGender,fbTokenTxt,fbToken,
-					fbFirstNameTxt,fbFirstName,fbLastNameTxt,fbLastName,fbLocationTxt,fbLocation;
+	private TextView fbUserNameTxt,fbMailTxt,fbGenderTxt,fbTokenTxt,
+					fbFirstNameTxt,fbLastNameTxt,fbLocationTxt;
 	
 	
 	@Override

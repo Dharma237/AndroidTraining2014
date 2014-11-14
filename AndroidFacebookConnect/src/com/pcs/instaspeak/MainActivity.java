@@ -17,7 +17,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.android.AsyncFacebookRunner;
@@ -27,7 +26,6 @@ import com.facebook.android.Facebook;
 import com.facebook.android.Facebook.DialogListener;
 import com.facebook.android.FacebookError;
 import com.pcs.constants.FacebookUserDetails;
-import com.pcs.instaspeak.R;
 
 @SuppressWarnings("deprecation")
 public class MainActivity extends Activity implements OnClickListener {
@@ -39,7 +37,6 @@ public class MainActivity extends Activity implements OnClickListener {
 	private AsyncFacebookRunner mAsyncRunner;
 	String FILENAME = "AndroidSSO_data";
 	private SharedPreferences mPrefs;
-	private TextView nameTxt, mailTxt;
 	private boolean facebook_installed = true;
 
 	// Buttons
@@ -185,7 +182,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -219,7 +215,6 @@ public class MainActivity extends Activity implements OnClickListener {
 						String name = profile.getString("name");
 						user.setUserName(name);
 						Log.e("Name:", name);
-						Log.d("Gettingttt", user.getUserName().toString());
 					}
 
 					if(profile.has("mail"))
