@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="app_name">Android Versions</string>
+    <string name="title">Android Versions</string>
+    <string name="versions">1.Angel Cake</string>
+
+    <string-array name="android_versions">
+        <item>1.Angel Cake</item>
+        <item>2.BattenBerg</item>
+        <item>3.Cupcake</item>
+        <item>4.Donut</item>
+        <item>5.Eclair</item>
+        <item>6.Froyo</item>
+        <item>7.GingerBread</item>
+        <item>8.HoneyComb</item>
+        <item>9.Ice Cream Sandwich</item>
+        <item>10.Jelly Bean</item>
+        <item>11.KitKat</item>
+        <item>12.Lollypop</item>
+    </string-array>
+
+    <array name="android_versions_icons">
+        <item>@drawable/version1</item>
+        <item>@drawable/version2</item>
+        <item>@drawable/version3</item>
+        <item>@drawable/version4</item>
+        <item>@drawable/version5</item>
+        <item>@drawable/version6</item>
+        <item>@drawable/version7</item>
+        <item>@drawable/version8</item>
+        <item>@drawable/version9</item>
+        <item>@drawable/version10</item>
+        <item>@drawable/version11</item>
+        <item>@drawable/version12</item>
+    </array>
+
+</resources>
