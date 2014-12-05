@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">TabsActivity</string>
+    <string name="dummy_section_text">Technology %1d </string>
+
+    <string name="demo_collection">Technologies Tabs</string>
+
+</resources>
