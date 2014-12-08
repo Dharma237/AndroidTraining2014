@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
+    <ImageView
+            android:id="@+id/update_screens_6_imageview"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:paddingTop="5dp"
+            android:layout_weight="0.7"
+            android:src="@drawable/updatescreen_6" />
+    
+    <TextView 
+        android:id="@+id/update_screens_6_headerText"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:paddingTop="10dp"
+        android:text="@string/update_screens_6_header"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="0.1" />
+    
+    
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2">
+    <TextView 
+        android:id="@+id/update_screens_6_contentText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_screens_6_content"
+        android:textSize="18sp"
+        android:layout_gravity="top"
+        android:gravity="top|center_horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+    
+    <Button 
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/got_it"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="bottom|right"/>
+    </FrameLayout>
+        
+    
+</LinearLayout>
+
+</FrameLayout>

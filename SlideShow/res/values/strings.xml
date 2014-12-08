@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">SlideShow</string>
+    <string name="takeatour">Take a Tour</string>
+    <string name="update_screens_1_header">Explore interesting topics</string>
+    <string name="update_screens_1_content">whatsay is a flowing collection of topics that you can discover and contribute to</string>
+    <string name="update_screens_2_header">See friends\' expressions</string>
+    <string name="update_screens_2_content">See what Facebook friends and college-mates are posting</string>
+    <string name="update_screens_3_header">Make your own post</string>
+    <string name="update_screens_3_content">Click on \"Make a Post\" to let others know how you feel</string>
+    <string name="update_screens_4_header">Personalize it</string>
+    <string name="update_screens_4_content">Start with a photo or a Google image. Then make it special with cropping, filters &amp; cool text!</string>
+    <string name="update_screens_5_header">Like and be liked </string>
+    <string name="update_screens_5_content">Double tap on any expression to show your appreciation</string>
+    <string name="update_screens_6_header">Anonymous polls</string>
+    <string name="update_screens_6_content">The check mark indicates a poll. Open and tap to vote!</string>
+    <string name="got_it">Got it</string>
+    <string name="success">Successfully Finished the SlideShow</string>
+
+</resources>
